@@ -352,10 +352,16 @@ footer {
     opacity: 0;
     overflow-y: scroll;
     transition: opacity 0.3s, transform 0.3s;
+    background-color: #fff;
 }
-#calcContainer::-webkit-scrollbar {
-    width:0;
-  }
+#calcContainer::-webkit-scrollbar{
+    width: 10px;
+}
+#calcContainer::-webkit-scrollbar-thumb{
+    background-color: #ddd;
+    border-radius: 10px;
+}
+
 #closeButton {
     position: absolute;
     top: 5px;
