@@ -305,10 +305,14 @@ footer {
 }
 #overlay.active,
 #popupContainer.active,
+#sk_renessansContainer.active,
+#calcChoiseContainer.active,
 #calcContainer.active {
     opacity: 1;
 }
 #popupContainer.active,
+#sk_renessansContainer.active,
+#calcChoiseContainer.active,
 #calcContainer.active {
     transform: translate(-50%, -50%) scale(1);
 }
@@ -358,6 +362,49 @@ footer {
     width: 10px;
 }
 #calcContainer::-webkit-scrollbar-thumb{
+    background-color: #ddd;
+    border-radius: 10px;
+}
+
+#calcChoiseContainer {
+    position: fixed;
+    border-radius: 35px;
+    left: 50%;
+    top: 50%;
+    width: 50%;
+    max-width: 500px;
+    height: 30%;
+    max-height: 300px;
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+    background-color: #fff;
+}
+
+#sk_renessansButton{
+    position: relative;
+    top: 35%;
+}
+
+#sk_renessansContainer {
+    position: fixed;
+    border-radius: 35px;
+    left: 50%;
+    top: 50%;
+    width: 90%;
+    max-width: 1000px;
+    height: 85%;
+    max-height: 1000px;
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+    overflow-y: scroll;
+    transition: opacity 0.3s, transform 0.3s;
+    background-color: #fff;
+}
+#sk_renessansContainer::-webkit-scrollbar{
+    width: 10px;
+}
+#sk_renessansContainer::-webkit-scrollbar-thumb{
     background-color: #ddd;
     border-radius: 10px;
 }
