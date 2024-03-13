@@ -30,27 +30,48 @@ function closePopup() {
         sk_renessans.style.display = "none";
     }, 300);
 }
+
+function closeCalc() {
+    var calc = document.getElementById("calcContainer");
+    calc.classList.remove("active");
+    setTimeout(function() {
+        calc.style.display = "none";
+    }, 300);
+}
+
+function closeCalcChoise() {
+    var calcChoise = document.getElementById("calcChoiseContainer");
+    var sk_renessans = document.getElementById("sk_renessansContainer");
+    calcChoise.classList.remove("active");
+    sk_renessans.classList.remove("active");
+    setTimeout(function() {
+        calcChoise.style.display = "none";
+        sk_renessans.style.display = "none";
+    }, 300);
+}
+
 function openCalcChoise() {
     var overlay = document.getElementById("overlay");
+    var calc = document.getElementById("calcContainer");
     var calcChoise = document.getElementById("calcChoiseContainer");
+    if(calc.classList.contains("active"))
+       closeCalc();
     overlay.style.display = "block";
     calcChoise.style.display = "block";
+    calc.classList.remove("active");
     body.style.overflow = "hidden";
     setTimeout(function() {
+        calc.style.display = "none";
         overlay.classList.add("active");
         calcChoise.classList.add("active");
     }, 10);
 }
 function opensk_renessans() {
-    var overlay = document.getElementById("overlay");
     var sk_renessans = document.getElementById("sk_renessansContainer");
     var calcChoise = document.getElementById("calcChoiseContainer");
     calcChoise.style.display = "none";
-    overlay.style.display = "block";
     sk_renessans.style.display = "block";
-    body.style.overflow = "hidden";
     setTimeout(function() {
-        overlay.classList.add("active");
         sk_renessans.classList.add("active");
     }, 10);
 }
@@ -58,6 +79,9 @@ function opensk_renessans() {
 function openCalc() {
     var overlay = document.getElementById("overlay");
     var calc = document.getElementById("calcContainer");
+    var calcChoise = document.getElementById("calcChoiseContainer");
+    if(calcChoise.classList.contains("active"))
+       closeCalcChoise();
     overlay.style.display = "block";
     calc.style.display = "block";
     body.style.overflow = "hidden";
