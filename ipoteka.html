@@ -25,10 +25,10 @@
             </div></a>
     </header>
     <div class="buttons-container">
-            <a href="osago.html"><div class="button_head left-button">ОСАГО</div></a>
-            <a href="kasko.html"><div class="button_head middle-button">Каско</div></a>
-            <div class="button_head right-button" onclick="openCalcChoise()">Ипотека</div>
-        </div>
+        <div class="button_head left-button" onclick="openCalc()">ОСАГО</div></a>
+        <div class="button_head middle-button" onclick="openCalc()">Каско</div></a>
+        <div class="button_head right-button" onclick="openCalcChoise()">Ипотека</div>
+    </div>
     <div class="main-content">
         <div class="section">
             <h2>ОСАГО и КАСКО скидкой до 30%</h2>
@@ -136,6 +136,142 @@
     <div id="sk_renessansContainer">
         <script src="https://www.renins.ru/iris/mortgage-widget-ui/injector.js?partner=828631d8-e3a6-4553-83ff-e316a5a33015"></script>
     </div>
-    <script src="ipoteka.js"></script>
+    <div id="calcContainer">
+        <div id="closeButton" onclick="closePopup()"></div>
+        <form id="insuranceForm">
+            <label for="category">Категория:</label>
+            <select id="category" name="category" onchange="handleCategoryChange()">
+                <option value="" selected disabled>Выберите категорию</option>
+                <option value="1">A/M</option>
+                <option value="2">B/BE</option>
+                <option value="3">C/CE</option>
+                <option value="4">D/DE</option>
+                <option value="5">D1</option>
+            </select>
+    
+            <div id="taxiCheckbox" class="hidden">
+                <label for="taxi">Такси <input type="checkbox" id="taxi" name="taxi"></label>
+            </div>
+    
+            <div id="maxWeightCheckbox" class="hidden">
+                <label for="maxWeight">Максимальная масса:</label>
+                <select id="maxWeight" name="maxWeight">
+                    <option value="" selected disabled>Выберите массу</option>
+                    <option value="16">16 тонн и менее</option>
+                    <option value="18">более 16 тонн</option>
+                </select>
+            </div>
+    
+            <label for="entity">Лицо:</label>
+            <select id="entity" name="entity">
+                <option value="" selected disabled>Выберите лицо</option>
+                <option value="1">Физическое</option>
+                <option value="2">Юридическое</option>
+            </select>
+    
+            <label for="city">Город:</label>
+            <select id="city" name="city">
+                <option value="" selected disabled>Выберите город</option>
+                <option value="1">Благовещенск</option>
+                <option value="1">Октябрьский</option>
+                <option value="2">Ишимбай</option>
+                <option value="2">Кумертау</option>
+                <option value="2">Салават</option>
+                <option value="3">Стерлитамак</option>
+                <option value="3">Туймазы</option>
+                <option value="4">Уфа</option>
+                <option value="5">Прочие города и населенные пункты</option>
+            </select>
+    
+            <label for="enginePower">Мощность двигателя в л.с.:</label>
+            <select id="enginePower" name="enginePower">
+                <option value="" selected disabled>Выберите мощность двигателя в л.с.</option>
+                <option value="1">До 50 включительно</option>
+                <option value="2">Свыше 50 до 70 включительно</option>
+                <option value="3">Свыше 70 до 100 включительно</option>
+                <option value="4">Свыше 100 до 120 включительно</option>
+                <option value="5">Свыше 120 до 150 включительно</option>
+                <option value="6">Свыше 150</option>
+            </select>
+    
+            <label for="limitedPersons">Число лиц ограничено <input type="checkbox" id="limitedPersons" name="limitedPersons"></label>
+            
+            <label for="age">Возраст:</label>
+            <select id="age" name="age">
+                <option value="" selected disabled>Выберите возраст</option>
+                <option value="0">16 - 21</option>
+                <option value="1">22 - 24</option>
+                <option value="2">25 - 29</option>
+                <option value="3">30 - 34</option>
+                <option value="4">35 - 39</option>
+                <option value="5">40 - 49</option>
+                <option value="6">50 - 59</option>
+                <option value="7">старше 59</option>
+            </select>
+    
+            <label for="experience">Стаж:</label>
+            <select id="experience" name="experience">
+                <option value="" selected disabled>Выберите стаж</option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3 - 4</option>
+                <option value="4">5 - 6</option>
+                <option value="5">7 - 9</option>
+                <option value="6">10 - 14</option>
+                <option value="7">более 14</option>
+            </select>
+    
+            <label for="registrationLocation">Авто зарегистрировано:</label>
+            <select id="registrationLocation" name="registrationLocation">
+                <option value="" selected disabled>Выберите страну</option>
+                <option value="ru">в России</option>
+                <option value="no_ru">не в России</option>
+            </select>
+    
+            <label for="insuranceDuration">Срок страхования:</label>
+            <select id="insuranceDuration" name="insuranceDuration">
+                <option value="" selected disabled>Выберите срок страхования</option>
+                <option value="1">От 5 до 15 дней*</option>
+                <option value="2">От 16 дней до 1 месяца*</option>
+                <option value="3">2 месяца*</option>
+                <option value="4">3 месяца</option>
+                <option value="5">4 месяца</option>
+                <option value="6">5 месяцев</option>
+                <option value="7">6 месяцев</option>
+                <option value="8">7 месяцев</option>
+                <option value="9">8 месяцев</option>
+                <option value="10">9 месяцев</option>
+                <option value="11">10 месяцев и более</option>
+                <option value="" disabled>*Только если авто не зарегистрировано в РФ</option>
+                <option value="" disabled>или следует в место регистрации</option>
+            </select>
+    
+            <label for="bonusMalusClass">Класс КБМ:</label>
+            <select id="bonusMalusClass" name="bonusMalusClass">
+                <option value="" selected disabled>Выберите класс КБМ</option>
+                <option value="1">М</option>
+                <option value="2">0</option>
+                <option value="3">1</option>
+                <option value="4">2</option>
+                <option value="5">3</option>
+                <option value="6">4</option>
+                <option value="7">5</option>
+                <option value="8">6</option>
+                <option value="9">7</option>
+                <option value="10">8</option>
+                <option value="11">9</option>
+                <option value="12">10</option>
+                <option value="13">11</option>
+                <option value="14">12</option>
+                <option value="15">13</option>
+            </select>
+    
+            <label for="followToRegistration">Следует в место регистрации <input type="checkbox" id="followToRegistration" name="followToRegistration"></label>
+            
+        </form>
+        <h3>Итого: <p id="total">0</p></h3>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
