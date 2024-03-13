@@ -12,8 +12,12 @@ function openPopup() {
 
 function closePopup() {
     var overlay = document.getElementById("overlay");
-    var popup = document.getElementById("popupContainer");
     var calc = document.getElementById("calcContainer");
+    var popup = document.getElementById("popupContainer");
+    var calcChoise = document.getElementById("calcChoiseContainer");
+    var sk_renessans = document.getElementById("sk_renessansContainer");
+    calcChoise.classList.remove("active");
+    sk_renessans.classList.remove("active");
     overlay.classList.remove("active");
     popup.classList.remove("active");
     calc.classList.remove("active");
@@ -22,7 +26,33 @@ function closePopup() {
         overlay.style.display = "none";
         popup.style.display = "none";
         calc.style.display = "none";
+        calcChoise.style.display = "none";
+        sk_renessans.style.display = "none";
     }, 300);
+}
+function openCalcChoise() {
+    var overlay = document.getElementById("overlay");
+    var calcChoise = document.getElementById("calcChoiseContainer");
+    overlay.style.display = "block";
+    calcChoise.style.display = "block";
+    body.style.overflow = "hidden";
+    setTimeout(function() {
+        overlay.classList.add("active");
+        calcChoise.classList.add("active");
+    }, 10);
+}
+function opensk_renessans() {
+    var overlay = document.getElementById("overlay");
+    var sk_renessans = document.getElementById("sk_renessansContainer");
+    var calcChoise = document.getElementById("calcChoiseContainer");
+    calcChoise.style.display = "none";
+    overlay.style.display = "block";
+    sk_renessans.style.display = "block";
+    body.style.overflow = "hidden";
+    setTimeout(function() {
+        overlay.classList.add("active");
+        sk_renessans.classList.add("active");
+    }, 10);
 }
 
 function openCalc() {
