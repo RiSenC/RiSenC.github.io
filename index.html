@@ -27,7 +27,7 @@
     <div class="buttons-container">
             <a href="osago.html"><div class="button_head left-button">ОСАГО</div></a>
             <a href="kasko.html"><div class="button_head middle-button">Каско</div></a>
-            <a href="house.html"><div class="button_head right-button">Ипотека</div></a>
+            <div class="button_head right-button" onclick="openCalcChoise()">Ипотека</div>
         </div>
     <div class="main-content">
         <div class="section">
@@ -47,7 +47,7 @@
                     <p>Поможет в случае не ожиданой ситуации на дороге</p>
                 </div></a>
             </div>
-            <a href="house.html"><div class="square-button"><h4><svg xmlns="http://www.w3.org/2000/svg" width="26" height="27" viewBox="0 0 24 24"><path fill="currentColor" d="m21.66 10.25l-9-8a1 1 0 0 0-1.32 0l-9 8a1 1 0 0 0-.27 1.11A1 1 0 0 0 3 12h1v9a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-9h1a1 1 0 0 0 .93-.64a1 1 0 0 0-.27-1.11M13 20h-2v-3a1 1 0 0 1 2 0Zm5 0h-3v-3a3 3 0 0 0-6 0v3H6v-8h12ZM5.63 10L12 4.34L18.37 10Z"/>
+            <a href="ipoteka.html"><div class="square-button"><h4><svg xmlns="http://www.w3.org/2000/svg" width="26" height="27" viewBox="0 0 24 24"><path fill="currentColor" d="m21.66 10.25l-9-8a1 1 0 0 0-1.32 0l-9 8a1 1 0 0 0-.27 1.11A1 1 0 0 0 3 12h1v9a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-9h1a1 1 0 0 0 .93-.64a1 1 0 0 0-.27-1.11M13 20h-2v-3a1 1 0 0 1 2 0Zm5 0h-3v-3a3 3 0 0 0-6 0v3H6v-8h12ZM5.63 10L12 4.34L18.37 10Z"/>
                 </svg>Ипотека</h4>
                 <p>Что бы быть спокойным</p>
             </div></a>
@@ -62,7 +62,7 @@
                 <p>выезд страхового агента в любую точку города</p>
             </div>
         </div>
-        <div class="button" id="openCalcButton" onclick="openCalc()">ИПОТЕКА СТРАХОВАНИЕ</div>
+        <div class="button" id="openCalcButton" onclick="openCalcChoise()">ИПОТЕКА СТРАХОВАНИЕ</div>
         <div class="square-section_office">
             <h3>Наши офисы <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M7.99999 0C3.58899 0 -1.01081e-05 3.589 -1.01081e-05 7.995C-0.0290101 14.44 7.69599 19.784 7.99999 20C7.99999 20 16.029 14.44 16 8C16 3.589 12.411 0 7.99999 0ZM7.99999 12C5.78999 12 3.99999 10.21 3.99999 8C3.99999 5.79 5.78999 4 7.99999 4C10.21 4 12 5.79 12 8C12 10.21 10.21 12 7.99999 12Z" fill="#50AE48"/>
@@ -116,7 +116,7 @@
             <div class="service-names">
                 <a href="osago.html" class="service-name">ОСАГО</a>
                 <a href="kasko.html" class="service-name">КАСКО</a>
-                <a href="house.html" class="service-name">Ипотека</a>
+                <a href="ipoteka.html" class="service-name">Ипотека</a>
             </div>
         </div>
         <div class="footer-logo">
@@ -130,9 +130,12 @@
         <button class="popupButton" onclick="navigate('https://www.example.com')">Telegram</button>
         <button class="popupButton" onclick="navigate('https://www.example.com')">VKontakte</button>
     </div>
-    <div id="calcContainer">
+    <div id="calcChoiseContainer">
+        <div class="openCalcButton choiseButton" id="sk_renessans" onclick="opensk_renessans()">СК Ренессанс</div>
+    </div>
+    <div id="sk_renessansContainer">
         <script src="https://www.renins.ru/iris/mortgage-widget-ui/injector.js?partner=828631d8-e3a6-4553-83ff-e316a5a33015"></script>
     </div>
-    <script src="script.js"></script>
+    <script src="ipoteka.js"></script>
 </body>
 </html>
