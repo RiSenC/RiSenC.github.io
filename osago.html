@@ -25,10 +25,10 @@
             </div></a>
     </header>
     <div class="buttons-container">
-            <a href="osago.html"><div class="button_head left-button">ОСАГО</div></a>
-            <a href="kasko.html"><div class="button_head middle-button">Каско</div></a>
-            <a href="ipoteka.html"><div class="button_head right-button">Ипотека</div></a>
-        </div>
+        <div class="button_head left-button" onclick="openCalc()">ОСАГО</div></a>
+        <div class="button_head middle-button" onclick="openCalc()">Каско</div></a>
+        <div class="button_head right-button" onclick="openCalcChoise()">Ипотека</div>
+    </div>
     <div class="main-content">
         <div class="section">
             <h2>ОСАГО и КАСКО скидкой до 30%</h2>
@@ -130,7 +130,12 @@
         <button class="popupButton" onclick="navigate('https://www.example.com')">Telegram</button>
         <button class="popupButton" onclick="navigate('https://www.example.com')">VKontakte</button>
     </div>
-
+    <div id="calcChoiseContainer">
+        <div class="button" id="sk_renessansButton" onclick="opensk_renessans()">СК Ренессанс</div>
+    </div>
+    <div id="sk_renessansContainer">
+        <script src="https://www.renins.ru/iris/mortgage-widget-ui/injector.js?partner=828631d8-e3a6-4553-83ff-e316a5a33015"></script>
+    </div>
     <div id="calcContainer">
         <div id="closeButton" onclick="closePopup()"></div>
         <form id="insuranceForm">
