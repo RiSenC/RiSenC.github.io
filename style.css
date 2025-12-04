@@ -58,19 +58,40 @@ p {
 }
 
 .main {
-    background-color: aqua;
     display: flex;
     flex: 1;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     column-gap: 47px;
     flex-wrap: wrap;
+    gap: 48px;
+}
+
+.flag-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 47px;
+    width: 100%;
 }
 
 .nation_flag {
     background-color: blueviolet;
-    width: 253px;
+    width: 252px;
     height: 162px;
-    margin-right: 90px;
+    font-size: 40px;
+    padding: 0;
+}
+
+img {
+    width: 250px;
+    height: 120px;
+    border: #fff solid 1px;
+    border-radius: 10px;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
 }
