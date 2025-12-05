@@ -1,0 +1,8 @@
+.main {
+    overflow-y: scroll;
+}
+
+.first_rank {
+    height: 515px;
+    width: 100%;
+}
