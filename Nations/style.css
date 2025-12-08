@@ -1,8 +1,48 @@
+ 
 .main {
     overflow-y: scroll;
+    color: white;
+    margin: 0;
+    padding: 0;
+    justify-content: start;
+    grid-template-columns: 5fr 2fr;
 }
 
 .first_rank {
     height: 515px;
     width: 100%;
+}
+
+.types_of_technic {
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+    height: 77px;
+    border-bottom: white solid 1px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.type {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.premium {
+    border-left: white solid 1px;
+}
+
+.type_text {
+    color: white;
+    font-size: 32px;
+}
+
+.rank_text {
+    margin: 0;
+}
+
+.rank {
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+    border: white solid 1px;
 }
