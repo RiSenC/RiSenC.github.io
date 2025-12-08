@@ -1,4 +1,6 @@
- 
+h1 {
+    margin: 0;
+} 
 .main {
     overflow-y: scroll;
     color: white;
@@ -6,6 +8,8 @@
     padding: 0;
     justify-content: start;
     grid-template-columns: 5fr 2fr;
+    width: 100%;
+    gap: 0;
 }
 
 .first_rank {
@@ -20,6 +24,7 @@
     border-bottom: white solid 1px;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
+    width: 100%;
 }
 
 .type {
@@ -44,5 +49,10 @@
 .rank {
     display: grid;
     grid-template-columns: 5fr 2fr;
-    border: white solid 1px;
+    border-bottom: white solid 1px;
+}
+
+.tank_sell {
+    width: 230px;
+    height: 115px;
 }
