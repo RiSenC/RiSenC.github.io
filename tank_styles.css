@@ -1,5 +1,7 @@
-h1, span {
+h1, h2, h3, h4, h5, h6, p, span {
     color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
 }
 
 .body {
@@ -42,7 +44,7 @@ h1, span {
     gap: 10px;
 }
 
-h1 {
+.heading_text {
     text-transform: uppercase;
     font-size: 64px;
     font-weight: bold;
@@ -51,11 +53,15 @@ h1 {
 
 .row {
     display: flex;
-    gap: 10px;
+    gap: 5px;
     margin-right: 25px;
 }
 .first_row {
     display: flex;
+}
+
+.first_row .column {
+    justify-content: space-around;
 }
 
 .column {
@@ -67,11 +73,11 @@ h1 {
 }
 
 .right_column {
-    border-radius: 0 10px 10px 0;
+    border-radius: 0 15px 15px 0;
 }
 
 .left_column {
-    border-radius: 10px 0 0 10px;
+    border-radius: 15px 0 0 15px;
 }
 
 .tank_flag {
@@ -86,6 +92,16 @@ h1 {
     width: 200%;
     z-index: 1;
     /*left: -100px;*/
+}
+
+.rating {
+    display: flex;
+    flex-direction: column;
+}
+
+.type {
+    font-size: 16px;
+    color: #aaa;
 }
 
 .icon_text {
