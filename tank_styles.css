@@ -1,7 +1,8 @@
-h1, h2, h3, h4, h5, h6, p, span {
+h1, h2, h3, h4, h5, h6, p, span, article {
     color: #fff;
     font-family: 'Roboto', sans-serif;
-    font-size: 24px;
+    font-size: 22px;
+    font-weight: 350;
 }
 
 .body {
@@ -20,6 +21,7 @@ h1, h2, h3, h4, h5, h6, p, span {
 }
 
 .section {
+    margin-top: 35px;
     width: 50%;
     background-color: #000;
     border-radius: 50px;
@@ -41,7 +43,7 @@ h1, h2, h3, h4, h5, h6, p, span {
     flex-direction: column;
     align-items: stretch;
     width: 100%;
-    gap: 10px;
+    gap: 5px;
 }
 
 .heading_text {
@@ -56,8 +58,14 @@ h1, h2, h3, h4, h5, h6, p, span {
     gap: 5px;
     margin-right: 25px;
 }
+
 .first_row {
     display: flex;
+    height: 22.5%;
+}
+
+.second_row, .third_row {
+    height: 15%;
 }
 
 .first_row .column {
@@ -70,6 +78,8 @@ h1, h2, h3, h4, h5, h6, p, span {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: rgba(0, 0, 0, 0.25);
+    z-index: 1;
 }
 
 .right_column {
@@ -82,16 +92,16 @@ h1, h2, h3, h4, h5, h6, p, span {
 
 .tank_flag {
     position: absolute;
-    width: 50%;
+    width: 60%;
     left: 0;
     top: 0;
 }
 
 .tank_img {
     position: relative;
-    width: 200%;
+    width: 270%;
     z-index: 1;
-    /*left: -100px;*/
+    left: -33%;
 }
 
 .rating {
@@ -99,13 +109,34 @@ h1, h2, h3, h4, h5, h6, p, span {
     flex-direction: column;
 }
 
-.type {
+.thin {
     font-size: 16px;
     color: #aaa;
+}
+
+.bold {
+    font-size: 28px;
+    font-weight: 600;
 }
 
 .icon_text {
     display: inline;
     font-size: 0;
-    height: 50%;
+}
+.icon_small {
+    height: 35%;
+    margin-right: 5px;
+}
+.icon_big {
+    height: 55%;
+}
+
+.content {
+    width: 80%;
+    margin: auto;
+}
+
+.heading {
+    font-size: 40px;
+    font-weight: 600;
 }
