@@ -2,22 +2,46 @@ h1, h2, h3, h4, h5, h6, p, span, article {
     color: #fff;
     font-family: 'Roboto', sans-serif;
     font-size: 22px;
+    font-weight: 400;
+    line-height: 110%;
+}
+
+.thin {
+    font-size: 16px;
+    color: #aaa;
     font-weight: 350;
+}
+
+.bold {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.icon_text {
+    display: inline;
+    font-size: 0;
 }
 
 .body {
     background-color: #101010;
 }
 
+/* Шапка */
+.header {
+    width: 65vw;
+    align-self: center;
+}
+
+.menu {
+    background-color: #000;
+}
+
+/* Основной контент */
 .main {
     flex-wrap: nowrap;
     flex: auto;
     justify-content: start;
-}
-.header {
-    background-color: #000;
-    width: 65vw;
-    align-self: center;
+    gap: 0;
 }
 
 .section {
@@ -29,6 +53,21 @@ h1, h2, h3, h4, h5, h6, p, span, article {
     position: relative;
     height: fit-content;
 }
+
+.content {
+    width: 80%;
+    margin: auto;
+}
+
+.heading {
+    font-size: 40px;
+    font-weight: 600;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+    border-bottom: #fff 1px solid;
+}
+
+/* Контент с танком */
 .heading_content {
     display: grid;
     grid-template-columns: 50% 50%;
@@ -36,12 +75,14 @@ h1, h2, h3, h4, h5, h6, p, span, article {
 
 .heading_content_left {
     width: 50%;
+    justify-content: center;
 }
 
 .heading_content_right {
     display: flex;
     flex-direction: column;
     align-items: stretch;
+    justify-content: center;
     width: 100%;
     gap: 5px;
 }
@@ -82,6 +123,22 @@ h1, h2, h3, h4, h5, h6, p, span, article {
     z-index: 1;
 }
 
+.first_row .left_column {
+    width: 35%;
+}
+
+.first_row .right_column {
+    width: 65%;
+}
+
+.second_row .left_column {
+    width: 40%;
+}
+
+.second_row .right_column {
+    width: 60%;
+}
+
 .right_column {
     border-radius: 0 15px 15px 0;
 }
@@ -109,34 +166,11 @@ h1, h2, h3, h4, h5, h6, p, span, article {
     flex-direction: column;
 }
 
-.thin {
-    font-size: 16px;
-    color: #aaa;
-}
-
-.bold {
-    font-size: 28px;
-    font-weight: 600;
-}
-
-.icon_text {
-    display: inline;
-    font-size: 0;
-}
 .icon_small {
     height: 35%;
     margin-right: 5px;
 }
+
 .icon_big {
     height: 55%;
-}
-
-.content {
-    width: 80%;
-    margin: auto;
-}
-
-.heading {
-    font-size: 40px;
-    font-weight: 600;
 }
