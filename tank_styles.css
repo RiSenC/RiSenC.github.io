@@ -6,6 +6,11 @@ h1, h2, h3, h4, h5, h6, p, span, article {
     line-height: 110%;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
 .thin {
     font-size: 16px;
     color: #aaa;
@@ -17,11 +22,20 @@ h1, h2, h3, h4, h5, h6, p, span, article {
     font-weight: 550;
 }
 
+.small_heading {
+    font-size: 32px;
+    font-weight: 600;
+}
+
 .heading {
     font-size: 40px;
     font-weight: 600;
-    padding: 0;
-    margin: 0;
+}
+
+.huge_heading {
+    text-transform: uppercase;
+    font-size: 64px;
+    font-weight: 800;
 }
 
 .icon_text {
@@ -85,13 +99,6 @@ h1, h2, h3, h4, h5, h6, p, span, article {
     justify-content: center;
     width: 100%;
     gap: 5px;
-}
-
-.tank_heading {
-    text-transform: uppercase;
-    font-size: 64px;
-    font-weight: bold;
-    margin: 0;
 }
 
 .row {
@@ -182,23 +189,31 @@ h1, h2, h3, h4, h5, h6, p, span, article {
     border-bottom: #fff 1px solid;
     padding-bottom: 15px;
     margin: 25px 0;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    min-width: 500px;
 }
 
 .buttons_container {
     display: flex;
+    flex-direction: row;
+    gap: 15px;
+    width: 50%;
 }
 
 .mode_buttons, .condition_buttons {
     display: flex;
     background-color: rgba(255,255,255,0.5);
-    border-radius: 15px;
+    border-radius: 50px;
     overflow: hidden;
+    width: 50%;
 }
 
 .buttons_container button {
     background: none;
     border: 0;
-    border-radius: 15px;
+    border-radius: 50px;
+    width: 50%;
 }
 
 .buttons_container button:active {
