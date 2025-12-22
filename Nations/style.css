@@ -43,7 +43,7 @@ h1 {
 }
 
 .rank_text {
-    margin: 0;
+    margin: 5px;
 }
 
 .rank {
@@ -65,9 +65,45 @@ h1 {
 
 
 
-.technic_grid_1_rank {
+/*.technic_grid_1_rank {
     grid-template-rows: repeat(3, 1fr);
 }
+
+
+.technic_grid_2_rank{
+    grid-template-rows: repeat(2, 1fr);
+
+}
+
+.technic_grid_3_rank{
+    grid-template-rows: repeat(3, 1fr)
+
+}
+
+.technic_grid_4_rank{
+    grid-template-rows: repeat(3, 1fr)
+
+}
+
+.technic_grid_5_rank{
+    grid-template-rows: repeat(2, 1fr)
+
+}
+
+.technic_grid_6_rank{
+    grid-template-rows: repeat(3, 1fr)
+
+}
+
+.technic_grid_7_rank{
+    grid-template-rows: repeat(2, 1fr)
+
+}
+
+.technic_grid_8_rank{
+    grid-template-rows: repeat(2, 1fr)
+
+}*/
 
 .technic_image {
     width: 100%;
