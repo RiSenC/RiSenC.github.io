@@ -59,7 +59,7 @@
 }
 
 /* Контент с танком */
-.heading_content {
+.tank_content {
     display: grid;
     grid-template-columns: 50% 50%;
 }
@@ -68,12 +68,12 @@
     padding-bottom: 10px;
 }
 
-.heading_content_left {
+.tank_content_left {
     width: 50%;
     justify-content: center;
 }
 
-.heading_content_right {
+.tank_content_right {
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -111,6 +111,36 @@
     z-index: 1;
 }
 
+
+.tank_flag {
+    position: absolute;
+    width: 60%;
+    left: 0;
+    top: 0;
+}
+
+.tank_img {
+    position: relative;
+    width: 270%;
+    z-index: 1;
+    left: -33%;
+}
+
+.rating {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon_small {
+    height: 35%;
+    margin-right: 5px;
+}
+
+.icon_big {
+    height: 55%;
+}
+
 .first_row .left_column {
     width: 35%;
 }
@@ -133,34 +163,9 @@
 
 .left_column {
     border-radius: 15px 0 0 15px;
-}
-
-.tank_flag {
-    position: absolute;
-    width: 60%;
-    left: 0;
-    top: 0;
-}
-
-.tank_img {
-    position: relative;
-    width: 270%;
-    z-index: 1;
-    left: -33%;
-}
-
-.rating {
     display: flex;
-    flex-direction: column;
-}
-
-.icon_small {
-    height: 35%;
-    margin-right: 5px;
-}
-
-.icon_big {
-    height: 55%;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Секция статов */
