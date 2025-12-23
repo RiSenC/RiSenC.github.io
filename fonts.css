@@ -43,6 +43,10 @@ h1, h2, h3, h4, h5, h6 {
     color: #aaa;
 }
 
+.table_regular_thin {
+    color: #aaa;
+}
+
 .table_white {
     font-weight: 550;
 }

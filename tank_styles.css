@@ -126,6 +126,13 @@
     left: -33%;
 }
 
+.br_heading {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .rating {
     display: flex;
     flex-direction: column;
@@ -184,7 +191,7 @@
 .mode_buttons, .condition_buttons {
     display: flex;
     background-color: rgba(255,255,255,0.5);
-    border-radius: 50px;
+    border-radius: 10px;
     overflow: hidden;
     width: 50%;
 }
@@ -192,7 +199,7 @@
 .buttons_container .button {
     background: none;
     border: 0;
-    border-radius: 50px;
+    border-radius: 10px;
     width: 50%;
 }
 
@@ -221,9 +228,26 @@
     justify-content: space-between;
     align-items: baseline;
     padding-bottom: 5px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
-.stats_row-basic, .stats_row-under_heading {
+.stats_row-basic, .stats_row-under_heading, .stats_row-crew {
     border-bottom: rgba(255,255,255,0.5) 1px dashed;
+}
+
+.stats_row-heading {
+    margin-bottom: 0;
+}
+
+.stats_row-under_heading span {
+    margin-left: 20px;
+}
+
+.stats_row-crew {
+    justify-content: space-around;
+}
+
+.stats_row-crew span {
+    width: -webkit-fill-available;
+    text-align: center;
 }
