@@ -112,4 +112,5 @@ h1 {
 
 img {
     background-color: rgba(0, 64, 96, 1);
+    border-radius: 10px;
 }
