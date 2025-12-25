@@ -115,7 +115,9 @@ h1 {
 
 .mini_technic_image{
     background-color: none;
-    width: 30%;
-    height: 30%;
-
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    top: 30px;
+    left: -10px;
 }
