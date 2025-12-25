@@ -1,0 +1,121 @@
+h1 {
+    margin: 0;
+} 
+.main {
+    overflow-y: scroll;
+    color: white;
+    margin: 0;
+    padding: 0;
+    justify-content: start;
+    grid-template-columns: 5fr 2fr;
+    width: 100%;
+    gap: 0;
+}
+
+.first_rank {
+
+    width: 100%;
+}
+
+.types_of_technic {
+    height: 77px;
+    border-bottom: white solid 1px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    width: 100%;
+}
+
+.type {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.premium {
+    border-left: white solid 1px;
+}
+
+.type_text {
+    color: white;
+    font-size: 32px;
+}
+
+.rank_text {
+    margin: 5px;
+}
+
+.rank {
+    border-bottom: white solid 1px;
+}
+
+.tank_sell {
+    width: 230px;
+    height: 115px;
+}
+
+.technic_grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 40px;
+    height: calc(100% - 28px);
+    margin: 0 10px 20px;
+}
+
+
+
+/*.technic_grid_1_rank {
+    grid-template-rows: repeat(3, 1fr);
+}
+
+
+.technic_grid_2_rank{
+    grid-template-rows: repeat(2, 1fr);
+
+}
+
+.technic_grid_3_rank{
+    grid-template-rows: repeat(3, 1fr)
+
+}
+
+.technic_grid_4_rank{
+    grid-template-rows: repeat(3, 1fr)
+
+}
+
+.technic_grid_5_rank{
+    grid-template-rows: repeat(2, 1fr)
+
+}
+
+.technic_grid_6_rank{
+    grid-template-rows: repeat(3, 1fr)
+
+}
+
+.technic_grid_7_rank{
+    grid-template-rows: repeat(2, 1fr)
+
+}
+
+.technic_grid_8_rank{
+    grid-template-rows: repeat(2, 1fr)
+
+}*/
+
+.technic_image {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 64, 96, 1);
+    border-radius: 10px;
+}
+
+
+.mini_technic_image{
+    background-color: none;
+    width: 30%;
+    height: 30%;
+
+}
