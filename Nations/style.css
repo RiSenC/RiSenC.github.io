@@ -110,7 +110,25 @@ h1 {
     height: 100%;
 }
 
-img {
+
+.mini_technic_image{
+    background-color: none;
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    top: 50px;
+    left: -30px;
+}
+
+.technic_technic_image{
+    width:80%;
+    height:80%;
+}
+
+.div_technic{
+    width: 100%;
+    height: 100%;
     background-color: rgba(0, 64, 96, 1);
     border-radius: 10px;
+
 }
