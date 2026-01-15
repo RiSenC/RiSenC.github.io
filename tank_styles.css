@@ -257,7 +257,7 @@
     width: 100%;
     border: 1px solid #fff;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-around;
     background-color: rgba(0, 0, 0, 0.25);
     z-index: 1;
@@ -276,6 +276,8 @@
     margin-top: 15px;
 }
 
-.stab {
-
+.top_stats_weaponry {
+    display: flex;
+    gap: 50px;
+    justify-content: space-between;
 }
