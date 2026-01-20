@@ -274,10 +274,19 @@
     background-color: rgba(0, 0, 0, 0.25);
     z-index: 1;
     margin-top: 15px;
+    padding: 13px;
+    box-sizing: border-box;
 }
 
 .top_stats_weaponry {
     display: flex;
-    gap: 50px;
+    margin-top: 20px;
+    gap: auto;
     justify-content: space-between;
+    width: 95%;
+}
+
+.stab_icon {
+    color: #fff;
+    width: 48px;
 }
