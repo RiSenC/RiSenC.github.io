@@ -108,6 +108,7 @@ h1 {
 .technic_image {
     width: 100%;
     height: 100%;
+    display: block;
 }
 
 
@@ -130,5 +131,17 @@ h1 {
     height: 100%;
     background-color: rgba(0, 64, 96, 1);
     border-radius: 10px;
+    display: inline-block;
+    position: relative;
 
+}
+
+.tank_name {
+    position: absolute;
+    top: -15%;    /* отступ от верхнего края */
+    right: 10px;  /* отступ от правого края */
+    text-align: right; /* выравнивание строк текста по правому краю */
+    color: white; /* Цвет текста */
+    font-size: 20px;
+    padding: 0%;
 }
