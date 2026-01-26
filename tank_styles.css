@@ -252,8 +252,8 @@
     text-align: center;
 }
 
-.korobka_weaponry {
-    border-radius: 15px 15px 15px 15px;
+.korobka_main_weaponry,  .korobka_second_weaponry {
+    border-radius: 15px;
     width: 100%;
     border: 1px solid #fff;
     display: flex;
