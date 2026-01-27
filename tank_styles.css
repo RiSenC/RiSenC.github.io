@@ -197,13 +197,15 @@
 }
 
 .buttons_container .button {
-    background: none;
+    background-color: transparent;
     border: 0;
     border-radius: 10px;
     width: 50%;
+    padding: 0;
+    transition: none;
 }
 
-.buttons_container .button:active {
+.buttons_container .button-active {
     background-color: #000;
     border: #fff 1px solid;
     color: #fff;
@@ -211,6 +213,15 @@
 
 .buttons_container .button:hover {
     cursor: pointer;
+    color: #fff;
+    transition: 0.5s;
+}
+
+.buttons_container .button:active {
+    background-color: #000;
+    border: #fff 1px solid;
+    color: #fff;
+    transition: none;
 }
 
 .top_stats_table {
@@ -252,41 +263,13 @@
     text-align: center;
 }
 
-.korobka_main_weaponry,  .korobka_second_weaponry {
-    border-radius: 15px;
-    width: 100%;
+.column_weaponory {
+    border-radius: 15px 15px 15px 15px;
+    width: 46%;
     border: 1px solid #fff;
     display: flex;
     align-items: center;
     justify-content: space-around;
     background-color: rgba(0, 0, 0, 0.25);
     z-index: 1;
-    flex-direction: column;
-}
-
-.korobka_stab {
-    border-radius: 15px;
-    width: 95%;
-    border: 1px solid #fff;
-    display: flex;
-    align-items: center;
-    justify-content:space-around;
-    background-color: rgba(0, 0, 0, 0.25);
-    z-index: 1;
-    margin-top: 15px;
-    padding: 13px;
-    box-sizing: border-box;
-}
-
-.top_stats_weaponry {
-    display: flex;
-    margin-top: 20px;
-    gap: auto;
-    justify-content: space-between;
-    width: 95%;
-}
-
-.stab_icon {
-    color: #fff;
-    width: 48px;
 }
