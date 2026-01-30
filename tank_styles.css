@@ -252,7 +252,7 @@
     text-align: center;
 }
 
-.korobka_main_weaponry,  .korobka_second_weaponry {
+.korobka_main_weaponry, .korobka_second_weaponry {
     border-radius: 15px;
     width: 100%;
     border: 1px solid #fff;
@@ -289,4 +289,8 @@
 .stab_icon {
     color: #fff;
     width: 48px;
+}
+
+.second_weapon {
+    margin-top: 40px;
 }
