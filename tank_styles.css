@@ -252,7 +252,7 @@
     text-align: center;
 }
 
-.korobka_main_weaponry, .korobka_second_weaponry {
+.korobka_main_weaponry, .korobka_second_weaponry, .korobka_ammo {
     border-radius: 15px;
     width: 100%;
     border: 1px solid #fff;
@@ -278,7 +278,7 @@
     box-sizing: border-box;
 }
 
-.top_stats_weaponry {
+.top_stats_weaponry, .ammo {
     display: flex;
     margin-top: 20px;
     gap: auto;
@@ -293,4 +293,5 @@
 
 .second_weapon {
     margin-top: 40px;
+    
 }
