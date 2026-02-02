@@ -292,6 +292,27 @@
 }
 
 .second_weapon {
-    margin-top: 40px;
-    
+    margin-top: 40px;   
+}
+
+.korobka_choose_ammo {
+    border-radius: 5px;
+    width: 10%;
+    border: 1px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.25);
+    z-index: 1;
+    flex-direction: column;
+}
+
+.stats_row-ammo {
+    border-bottom: rgba(255,255,255,0.5) 1px dashed;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
 }
