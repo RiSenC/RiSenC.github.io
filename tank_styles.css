@@ -203,10 +203,14 @@
     width: 50%;
 }
 
-.buttons_container .button:active {
+.buttons_container .button-active {
     background-color: #000;
     border: #fff 1px solid;
     color: #fff;
+}
+
+.buttons_container .button:active {
+    background-color: #505050;
 }
 
 .buttons_container .button:hover {
