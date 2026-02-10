@@ -112,15 +112,15 @@
                     <h2 class="heading">Характеристики</h2>
                     <div class="buttons_container">
                         <div class="mode_buttons">
-                            <button class="rb_button button">
+                            <button id="statsRBbutton" class="rb_button button button-active">
                                 Реалистичные
                             </button>
-                            <button class="ab_button button">
+                            <button id="statsABbutton" class="ab_button button">
                                 Аркадные
                             </button>
                         </div>
                         <div class="condition_buttons">
-                            <button class="top_condition_button button">
+                            <button class="top_condition_button button button-active">
                                 Эталонные
                             </button>
                             <button class="base_condition_button button">
@@ -169,7 +169,7 @@
                             </div>
                             <div class="stats_row stats_row-under_heading">
                                 <span class="table_small">Вперёд</span>
-                                <span class="table_white">35 км/ч</span>
+                                <span class="table_white" id="stat_kmh">35 км/ч</span>
                             </div>
                             <div class="stats_row stats_row-under_heading">
                                 <span class="table_small">Назад</span>
@@ -177,11 +177,11 @@
                             </div>
                             <div class="stats_row stats_row-basic">
                                 <span class="table_regular">Удельная мощность</span>
-                                <span class="table_white"> 13,2 л.с./т</span>
+                                <span class="table_white" id="stat_total"> 13,2 л.с./т</span>
                             </div>
                             <div class="stats_row stats_row-under_heading">
                                 <span class="table_regular_thin">Мощность двигателя</span>
-                                <span class="table_white">500 л.с.</span>
+                                <span class="table_white" id="stat_engine">500 л.с.</span>
                             </div>
                             <div class="stats_row stats_row-under_heading">
                                 <span class="table_regular_thin">Масса</span>
