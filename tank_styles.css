@@ -334,10 +334,25 @@
     width: 95%;
 }
 
-.stats_row {
+.stats_row-ammo_choose {
     display: flex;
-    justify-content: space-between;
     align-items: baseline;
     padding-bottom: 5px;
+    padding-top: 5px;
     margin-bottom: 10px;
+    flex-direction: row;
+}
+
+.korobka_stab {
+    border-radius: 15px;
+    width: 95%;
+    border: 1px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    background-color: rgba(0, 0, 0, 0.25);
+    z-index: 1;
+    margin-top: 15px;
+    padding: 13px;
+    box-sizing: border-box;
 }
