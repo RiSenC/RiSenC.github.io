@@ -112,18 +112,18 @@
                     <h2 class="heading">Характеристики</h2>
                     <div class="buttons_container">
                         <div class="mode_buttons">
-                            <button id="statsRBbutton" class="rb_button button button-active">
+                            <button id="statsRBbutton" class="button button-active" onclick="rbStatsButton()">
                                 Реалистичные
                             </button>
-                            <button id="statsABbutton" class="ab_button button">
+                            <button id="statsABbutton" class="button" onclick="abStatsButton()">
                                 Аркадные
                             </button>
                         </div>
                         <div class="condition_buttons">
-                            <button class="top_condition_button button button-active">
+                            <button id="stats_top_button" class="button button-active" onclick="topStatsButton()">
                                 Эталонные
                             </button>
-                            <button class="base_condition_button button">
+                            <button id="stats_base_button" class="button" onclick="baseStatsButton()">
                                 Базовые
                             </button>
                         </div>
@@ -169,7 +169,7 @@
                             </div>
                             <div class="stats_row stats_row-under_heading">
                                 <span class="table_small">Вперёд</span>
-                                <span class="table_white" id="stat_kmh">35 км/ч</span>
+                                <span class="table_white" id="stats_kmh">35 км/ч</span>
                             </div>
                             <div class="stats_row stats_row-under_heading">
                                 <span class="table_small">Назад</span>
@@ -177,15 +177,15 @@
                             </div>
                             <div class="stats_row stats_row-basic">
                                 <span class="table_regular">Удельная мощность</span>
-                                <span class="table_white" id="stat_total"> 13,2 л.с./т</span>
+                                <span class="table_white" id="stats_total"> 13.2 л.с./т</span>
                             </div>
                             <div class="stats_row stats_row-under_heading">
                                 <span class="table_regular_thin">Мощность двигателя</span>
-                                <span class="table_white" id="stat_engine">500 л.с.</span>
+                                <span class="table_white" id="stats_engine">500 л.с.</span>
                             </div>
                             <div class="stats_row stats_row-under_heading">
                                 <span class="table_regular_thin">Масса</span>
-                                <span class="table_white">37,8 т</span>
+                                <span class="table_white">37.8 т</span>
                             </div>
                         </div>
                     </section>
@@ -201,7 +201,7 @@
                         <span class="table_white">Водитель</span>
                     </div>
                     <div class="stats_row">
-                        <span class="table_subtext">Крастность оптики</span>
+                        <span class="table_subtext">Кратность оптики</span>
                     </div>
                     <div class="stats_row stats_row-crew">
                         <span class="table_white">4.3x-5.0x</span>
@@ -220,12 +220,12 @@
 
                     
                     <div class="korobka_korobka buttons_container">
-                        <h3 class="small_heading">Вооружение</h3>
+                        <h2 class="heading">Вооружение</h3>
                         <div class="mode_buttons">
-                            <button class="ass_button button">
+                            <button class="button button-active">
                                 Асы
                             </button>
-                            <button class="lohi_button button">
+                            <button class="button">
                                 Базовый экипаж
                             </button>
                         </div>
@@ -236,18 +236,18 @@
                     <div class="buttons_container">
                         
                         <div class="mode_buttons">
-                            <button class="rb_button button">
+                            <button id="wpnry_rbButton" class="button button-active" onclick="rbWpnryButton()">
                                 Реалистичные
                             </button>
-                            <button class="ab_button button">
+                            <button id="wpnry_abButton" class="button" onclick="abWpnryButton()">
                                 Аркадные
                             </button>
                         </div>
                         <div class="condition_buttons">
-                            <button class="top_condition_button button">
+                            <button id="wpnry_topButton" class="button button-active" onclick="topWpnryButton()">
                                 Эталонные
                             </button>
-                            <button class="base_condition_button button">
+                            <button id="wpnry_baseButton" class="button" onclick="baseWpnryButton()">
                                 Базовые
                             </button>
                         </div>
@@ -418,7 +418,7 @@
                         <section class="stats_sub_section">
                             <div class="stats_row-with_heading">
                                 <div class="stats_row">
-                                    <span class="table_white">12,7-мм пулемёт M2HB</span>
+                                    <span class="table_white">12.7-мм пулемёт M2HB</span>
                                 </div>
                                 <div class="stats_row stats_row-basic">
                                     <span class="table_regular">Скорострельность</span>
@@ -478,5 +478,6 @@
         <section class="section rating">
         </section>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>
