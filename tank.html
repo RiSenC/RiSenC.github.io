@@ -212,7 +212,7 @@
             </div>
         </section>
                     <!-- Вооружение -->
-        <section class="section stats">
+        <section class="section weapon">
             <!-- Главное орудие -->
             <div class="content">
                 <header class="content_header">
@@ -222,10 +222,10 @@
                     <div class="korobka_korobka buttons_container">
                         <h2 class="heading">Вооружение</h3>
                         <div class="mode_buttons">
-                            <button class="button button-active">
+                            <button id="wpnry_aceButton" class="button button-active" onclick="aceWpnryButton()">
                                 Асы
                             </button>
-                            <button class="button">
+                            <button id="wpnry_lohiButton" class="button" onclick="lohiWpnryButton()">
                                 Базовый экипаж
                             </button>
                         </div>
@@ -233,7 +233,7 @@
                     
                     
                     
-                    <div class="buttons_container">
+                    <div class="korobka_korobka buttons_container">
                         
                         <div class="mode_buttons">
                             <button id="wpnry_rbButton" class="button button-active" onclick="rbWpnryButton()">
@@ -278,7 +278,7 @@
                                     </div>
                                     <div class="stats_row stats_row-basic">
                                         <span class="table_regular">Перезарядка</span>
-                                        <span class="table_white"> 5 с. </span>
+                                        <span id="wpnry_reload_m3" class="table_white"> 5 с</span>
                                     </div>
                                     <div class="stats_row stats_row-basic">
                                         <span class="table_regular">Рекомендуется в бой</span>
@@ -297,11 +297,11 @@
                                 </div>
                                 <div class="stats_row stats_row-under_heading">
                                     <span class="table_regular">Горизонтальтная</span>
-                                    <span class="table_white"> 24 °/с</span>
+                                    <span id="wpnry_horizontal_m3" class="table_white"> 24 °/с</span>
                                 </div>
                                 <div class="stats_row stats_row-under_heading">
                                     <span class="table_regular">Вертикальная</span>
-                                    <span class="table_white"> 4 °/с </span>
+                                    <span id="wpnry_vertical_m3" class="table_white"> 4 °/с </span>
                                 </div>
                             </section>
                         </div>
