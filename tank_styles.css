@@ -19,6 +19,13 @@
 
 .menu {
     background-color: #000;
+    width: unset;
+    justify-content: space-evenly;
+}
+
+.center_text {
+    display: inline;
+    margin: auto 0;
 }
 
 /* Основной контент */

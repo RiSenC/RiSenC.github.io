@@ -15,6 +15,8 @@ body {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    width: 100vw;
+    overflow-x: hidden;
 }
 
 .menu {
@@ -28,6 +30,8 @@ body {
     box-sizing: border-box;
     margin: 0;
     font-weight: 800;
+    width: 70%;
+    margin: 0 auto;
 }
 
 .header_block {
