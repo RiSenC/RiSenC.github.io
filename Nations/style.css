@@ -2,14 +2,14 @@ h1 {
     margin: 0;
 } 
 .main {
-    overflow-y: scroll;
     color: white;
     margin: 0;
     padding: 0;
     justify-content: start;
     grid-template-columns: 5fr 2fr;
-    width: 100%;
     gap: 0;
+    width: 70%;
+    margin: 0 auto;
 }
 
 .first_rank {
@@ -168,4 +168,19 @@ h1 {
 
 .img{
     object-fit: scale-down;
+}
+
+.premium {
+    display: flex;
+    position: absolute;
+    right: -60vw;
+    width: 70%;
+    height: 306%;
+    background-color: rgb(236, 186, 46);
+    z-index: 25;
+    transition: 0.25s;
+}
+
+.premium:focus-within{
+    transform: translateX(-59vw);
 }
