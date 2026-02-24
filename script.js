@@ -25,7 +25,6 @@ function updateStats() {
     stats_total.textContent = stats_total_values[index] + " л.с./т";
     
     // Цвета: кмч зависит от режима, остальное от условия
-    stats_kmh.style.color = stats_modeFlag ? "green" : "red";
     stats_engine.style.color = stats_conditionFlag ? "red" : "green";
     stats_total.style.color = stats_conditionFlag ? "red" : "green";
 }
@@ -36,6 +35,7 @@ function rbStatsButton() {
         stats_modeFlag = 0;
         document.getElementById("statsABbutton").classList.remove("button-active");
         document.getElementById("statsRBbutton").classList.add("button-active");
+        stats_kmh.style.color = stats_modeFlag ? "green" : "red";
         updateStats();
     }
 }
@@ -45,6 +45,7 @@ function abStatsButton() {
         stats_modeFlag = 1;
         document.getElementById("statsABbutton").classList.add("button-active");
         document.getElementById("statsRBbutton").classList.remove("button-active");
+        stats_kmh.style.color = stats_modeFlag ? "green" : "red";
         updateStats();
     }
 }
@@ -110,14 +111,6 @@ function updateWpnry() {
     // Горизонтальная и вертикальная наводка
     wpnry_horizontal.textContent = wpnry_horizontal_values[wpnry_crewFlag][wpnry_modeFlag][wpnry_conditionFlag] + " °/с";
     wpnry_vertical.textContent = wpnry_vertical_values[wpnry_crewFlag][wpnry_modeFlag][wpnry_conditionFlag] + " °/с";
-    
-    // Цвета
-    wpnry_reload.style.color = wpnry_crewFlag ? "red" : "green";
-    
-    // Для наводки: зеленый если (АБ и эталон) или (асы), иначе красный
-    const isGreen = (wpnry_modeFlag && !wpnry_conditionFlag) || !wpnry_crewFlag;
-    wpnry_horizontal.style.color = isGreen ? "green" : "red";
-    wpnry_vertical.style.color = isGreen ? "green" : "red";
 }
 
 // Кнопки вооружения
@@ -126,6 +119,9 @@ function aceWpnryButton() {
         wpnry_crewFlag = 0;
         document.getElementById("wpnry_lohiButton").classList.remove("button-active");
         document.getElementById("wpnry_aceButton").classList.add("button-active");
+        wpnry_reload.style.color = "green";
+        wpnry_horizontal.style.color = "green";
+        wpnry_vertical.style.color = "green";
         updateWpnry();
     }
 }
@@ -135,6 +131,9 @@ function lohiWpnryButton() {
         wpnry_crewFlag = 1;
         document.getElementById("wpnry_lohiButton").classList.add("button-active");
         document.getElementById("wpnry_aceButton").classList.remove("button-active");
+        wpnry_reload.style.color = "red";
+        wpnry_horizontal.style.color = "red";
+        wpnry_vertical.style.color = "red";
         updateWpnry();
     }
 }
@@ -144,6 +143,8 @@ function rbWpnryButton() {
         wpnry_modeFlag = 0;
         document.getElementById("wpnry_abButton").classList.remove("button-active");
         document.getElementById("wpnry_rbButton").classList.add("button-active");
+        wpnry_horizontal.style.color = "red";
+        wpnry_vertical.style.color = "red";
         updateWpnry();
     }
 }
@@ -151,8 +152,10 @@ function rbWpnryButton() {
 function abWpnryButton() {
     if (!wpnry_modeFlag) {
         wpnry_modeFlag = 1;
-        document.getElementById("wpnry_abButton").classList.add("button-active");
+        document.getElementById("wpnry_abButton").classList.add("button-active")
         document.getElementById("wpnry_rbButton").classList.remove("button-active");
+        wpnry_horizontal.style.color = "green";
+        wpnry_vertical.style.color = "green";
         updateWpnry();
     }
 }
@@ -162,6 +165,8 @@ function topWpnryButton() {
         wpnry_conditionFlag = 0;
         document.getElementById("wpnry_baseButton").classList.remove("button-active");
         document.getElementById("wpnry_topButton").classList.add("button-active");
+        wpnry_horizontal.style.color = "green";
+        wpnry_vertical.style.color = "green";
         updateWpnry();
     }
 }
@@ -171,6 +176,8 @@ function baseWpnryButton() {
         wpnry_conditionFlag = 1;
         document.getElementById("wpnry_baseButton").classList.add("button-active");
         document.getElementById("wpnry_topButton").classList.remove("button-active");
+        wpnry_horizontal.style.color = "red";
+        wpnry_vertical.style.color = "red";
         updateWpnry();
     }
 }
