@@ -8,7 +8,7 @@
 }
 
 .body {
-    background-color: #161616;
+    background-color: #101010;
 }
 
 /* Шапка */
@@ -19,13 +19,6 @@
 
 .menu {
     background-color: #000;
-    width: unset;
-    justify-content: space-evenly;
-}
-
-.center_text {
-    display: inline;
-    margin: auto 0;
 }
 
 /* Основной контент */
@@ -341,7 +334,7 @@
     padding-bottom: 20px;  
 }
 
-.korobka_choose_ammo {
+.korobka_choose_ammo, .machine_gun_ammo {
     border-radius: 5px;
     width: 15%;
     border: 1px solid #fff;
@@ -349,49 +342,8 @@
     align-items: center;
     justify-content: space-between;
     background-color: rgba(0, 0, 0, 0.25);
-    position: relative;
-    padding: 0;
-}
-
-
-.shell_window {
-    display: none;
-    position: absolute;
-    left: -0.5px;
-    text-align: left;
-    top: -1px;
-    border: 1px solid #fff;
-    border-radius: 5px;
-    width: 450px;
-    height: 600px;
-    background-color: #161616;
     z-index: 1;
 }
-
-.shell_header {
-    background-color: #000;
-    display: flex;
-    padding: 10px;
-    align-items: center;
-    gap: 10px;
-}
-
-.shell_info-main {
-    display: flex;
-    text-align: center;
-    margin-top: 10px;
-    padding-right: 10px;
-}
-
-.info_box {
-    background-color: #000;
-    margin-left: 10px;
-}
-
-#M61:focus-within .shell_window {
-    display: block;
-}
-
 
 .stats_row-ammo {
     border-bottom: rgba(255,255,255,0.5) 1px dashed;
@@ -436,5 +388,6 @@
     align-items: center;
     justify-content:space-around;
     background-color: rgba(0, 0, 0, 0.25);
+    z-index: 1;
     box-sizing: border-box;
 }
