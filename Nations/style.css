@@ -68,46 +68,6 @@ h1 {
 
 
 
-/*.technic_grid_1_rank {
-    grid-template-rows: repeat(3, 1fr);
-}
-
-
-.technic_grid_2_rank{
-    grid-template-rows: repeat(2, 1fr);
-
-}
-
-.technic_grid_3_rank{
-    grid-template-rows: repeat(3, 1fr)
-
-}
-
-.technic_grid_4_rank{
-    grid-template-rows: repeat(3, 1fr)
-
-}
-
-.technic_grid_5_rank{
-    grid-template-rows: repeat(2, 1fr)
-
-}
-
-.technic_grid_6_rank{
-    grid-template-rows: repeat(3, 1fr)
-
-}
-
-.technic_grid_7_rank{
-    grid-template-rows: repeat(2, 1fr)
-
-}
-
-.technic_grid_8_rank{
-    grid-template-rows: repeat(2, 1fr)
-
-}*/
-
 .technic_image {
     width: 100%;
     object-position:right;
@@ -141,6 +101,9 @@ h1 {
     border-radius: 10px;
     display: inline-block;
     position: relative;
+    width: 392px;
+    height: 196px;
+    
     
 
 }
@@ -199,4 +162,12 @@ a {
 body {
     display: block;
     height: auto;
+}
+
+.technic_grid_prem {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    height: calc(100% - 28px);
+    margin: 0 10px 20px;
 }
