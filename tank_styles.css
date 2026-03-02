@@ -314,7 +314,7 @@
     flex-direction: column;
 }
 
-.korobka_stab, .korobka_ammo-machine_gun {
+.korobka_stab {
     border-radius: 15px;
     width: 95%;
     border: 1px solid #fff;
@@ -346,7 +346,7 @@
     padding-bottom: 20px;  
 }
 
-.korobka_choose_ammo, .machine_gun_ammo {
+.korobka_choose_ammo  {
     border-radius: 5px;
     width: 15%;
     border: 1px solid #fff;
@@ -446,4 +446,29 @@
     background-color: rgba(0, 0, 0, 0.25);
     z-index: 1;
     box-sizing: border-box;
+}
+
+.korobka_ammo-machine_gun {
+    border-radius: 15px;
+    border: 1px solid #fff;
+    display: grid;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.25);
+    z-index: 1;
+    box-sizing: border-box;
+    flex-direction: column;
+}
+
+.machine_gun_ammo {
+    border-radius: 5px;
+    width: 15%;
+    border: 1px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.25);
+    padding: 0;
+    flex-direction: row;
+    margin-right: 200px;
 }
