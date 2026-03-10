@@ -56,11 +56,18 @@
     .section, .header {
         width: 95%;
     }
+
+    .menu_research {
+        width: 88%;
+    }
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1400px){
     .section, .header {
         width: 85%;
+    }
+    .menu_research {
+        width: 90%;
     }
 }
 
@@ -68,11 +75,19 @@
     .section, .header {
         width: 70%;
     }
+    .menu_research {
+        width: 90%;
+    }
+    
 }
 
 @media screen and (min-width: 2560px){
     .section, .header {
         width: 50%;
+    }
+
+    .menu_research {
+        width: 85%;
     }
 }
 
@@ -466,3 +481,5 @@
     align-items: center;
     background-color: rgba(0, 0, 0, 0.25);
 }
+
+
