@@ -14,18 +14,15 @@
     <body class="body">
         <header class="header">
             <nav class="menu">
-                <a href="index.html" class="header_notcenter_text header_block">
-                    <span class="tanks_text">Tanks</span>
-                    <span class="wiki_text">Wiki</span>
+                <a href="index.html" class="header_block">
+                    <span class="tanks_text heading">Tanks</span>
+                    <span class="wiki_text heading">Wiki</span>
                 </a>
                 <div class="center_text header_block">
-                    <a href="#0"></a>
-                    <p class="header_text">Главная</p>
+                    <a href="Nations/USA.html"><span class="header_text huge_heading">США</span>
+                    <a href="#0"><span class="header_text huge_heading">/M4A3E2</span></a>
                 </div>
-                <a href="index.html" class="header_notcenter_text header_block">
-                    <span class="tanks_text">Tanks</span>
-                    <span class="wiki_text">Wiki</span>
-                </a>
+                <button class="search">Поиск</button>
             </nav>
         </header>
         <main class="main">
@@ -47,8 +44,7 @@
                             </div>
                             <div class="column right_column">
                                 <div class="br_heading">
-                                    <span>Боевой </span>
-                                    <span>рейтинг</span>
+                                    <p>Боевой рейтинг</p>
                                 </div>
                                 <div class="rating">
                                     <span class="thin">АБ</span>
@@ -211,13 +207,11 @@
                     </section>
                 </div>
             </section>
-                        <!-- Вооружение -->
+            <!-- Вооружение -->
             <section class="section weapon">
                 <!-- Главное орудие -->
                 <div class="content">
                     <header class="content_header">
-                        
-
                         
                         <div class="korobka_korobka buttons_container">
                             <h2 class="heading">Вооружение</h3>
@@ -229,9 +223,7 @@
                                     Базовый экипаж
                                 </button>
                             </div>
-                        </div>
-                        
-                        
+                        </div>                      
                         
                         <div class="korobka_korobka buttons_container">
                             
@@ -309,16 +301,16 @@
                             <div class="stats_row">
                                 <span class="table_white">Доступные боеприпасы</span>
                             </div>
-                            <section class="ammo stats_sub_section">
+                            <section class="ammo">
                                 <!-- Коробка с видами снарядов -->
                                 <div class="korobka_ammo stats_row-ammo_choose">
                                     <!-- Сплошной M72 -->
                                     <div class="korobka_choose_ammo">
                                         <!-- Изображение -->
-                                            <div class="stats_row">
-                                                <img style="width: 100px; margin-top: 15%;" src="./img/main_ammo/Rectangle 229.png">
+                                            <div >
+                                                <img src="./img/main_ammo/Rectangle 229.png">
                                             </div>  
-                                        <div class="stats_sub_section">  
+                                        <div>  
                                             <!-- Описание снаряда -->
                                             <div class="stats_row-ammo">
                                                 <span class="table_white">M72</span>
@@ -326,7 +318,7 @@
                                             <div class="stats_row-ammo">
                                                 <span class="table_white">БС</span>
                                             </div>
-                                            <div style="padding-bottom: 15px;" class= "stats_row-ammo_penetration">
+                                            <div class= "stats_row-ammo_penetration">
                                                 <span class="table_white">91 мм</span>
                                             </div>
                                         </div>
@@ -334,10 +326,10 @@
                                     <!-- Фугасный M48 -->
                                     <div class="korobka_choose_ammo">
                                         <!-- Изображение -->
-                                            <div class="stats_row">
-                                            <img style="width: 100px; margin-top: 15%;" src="./img/main_ammo/Rectangle 148.png">
-                                            </div>  
-                                        <div class="stats_sub_section">  
+                                        <div >
+                                            <img src="./img/main_ammo/Rectangle 148.png">
+                                        </div>  
+                                        <div>  
                                             <!-- Описание снаряда -->
                                             <div class="stats_row-ammo">
                                                 <span class="table_white">M48</span>
@@ -345,7 +337,7 @@
                                             <div class="stats_row-ammo">
                                                 <span class="table_white">ОФС</span>
                                             </div>
-                                            <div style="padding-bottom: 15px;" class= "stats_row-ammo_penetration">
+                                            <div class= "stats_row-ammo_penetration">
                                                 <span class="table_white">10 мм</span>
                                             </div>
                                         </div>
@@ -353,20 +345,16 @@
                                     <!-- Каморник M61 -->
                                     <button class="korobka_choose_ammo" id="M61">
                                         <!-- Изображение -->
-                                            <div class="stats_row">
-                                                <img style="width: 100px; margin-top: 15%;" src="./img/main_ammo/Rectangle 229.png">
-                                            </div>  
-                                        <div class="stats_sub_section">  
+                                        <div>
+                                            <img src="./img/main_ammo/Rectangle 229.png">
+                                        </div>  
+                                        <div class="choose_ammo_description">  
                                             <!-- Описание снаряда -->
-                                            <div class="stats_row-ammo">
-                                                <span class="table_white">M61</span>
-                                            </div>
-                                            <div class="stats_row-ammo">
-                                                <span class="table_white">БС</span>
-                                            </div>
-                                            <div style="padding-bottom: 15px;" class= "stats_row-ammo_penetration">
-                                                <span class="table_white">104 мм</span>
-                                            </div>
+                                            <span class="table_white">M61</span>
+                                            <div class="line"></div>
+                                            <span class="table_white">БС</span>
+                                            <div class="line"></div>
+                                            <span class="table_white">104 мм</span>
                                         </div>
                                         <div class="shell_window">
                                             <div class="shell_header">
@@ -424,10 +412,10 @@
                                     <!-- Подклалиберный T45 -->
                                     <div class="korobka_choose_ammo">
                                         <!-- Изображение -->
-                                            <div class="stats_row">
-                                            <img style="width: 100px; margin-top: 15%;" src="./img/main_ammo/Rectangle 230.png">
-                                            </div>  
-                                        <div class="stats_sub_section">  
+                                        <div >
+                                            <img src="./img/main_ammo/Rectangle 230.png">
+                                        </div>  
+                                        <div>  
                                             <!-- Описание снаряда -->
                                             <div class="stats_row-ammo">
                                                 <span class="table_white">T45</span>
@@ -435,7 +423,7 @@
                                             <div class="stats_row-ammo">
                                                 <span class="table_white">БПС</span>
                                             </div>
-                                            <div style="padding-bottom: 15px;" class= "stats_row-ammo_penetration">
+                                            <div class= "stats_row-ammo_penetration">
                                                 <span class="table_white">139 мм</span>
                                             </div>
                                         </div>
@@ -443,10 +431,10 @@
                                     <!-- Дымовой M89 -->
                                     <div class="korobka_choose_ammo">
                                         <!-- Изображение -->
-                                            <div class="stats_row">
-                                            <img style="width: 100px; margin-top: 15%;" src="./img/main_ammo/Rectangle 231.png">
-                                            </div>  
-                                        <div class="stats_sub_section">  
+                                        <div >
+                                            <img src="./img/main_ammo/Rectangle 231.png">
+                                        </div>  
+                                        <div>  
                                             <!-- Описание снаряда -->
                                             <div class="stats_row-ammo">
                                                 <span class="table_white">M89</span>
@@ -454,7 +442,7 @@
                                             <div class="stats_row-ammo">
                                                 <span class="table_white">ДС</span>
                                             </div>
-                                            <div style="padding-bottom: 15px;" class= "stats_row-ammo_penetration">
+                                            <div class= "stats_row-ammo_penetration">
                                                 <span class="table_white">3 мм</span>
                                             </div>
                                         </div>
