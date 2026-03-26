@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    transition: 0.33s;
 }
 
 .icon_text {
@@ -16,7 +17,8 @@
     width: 70%;
     align-self: center;
     position: fixed;
-    transition: 0.4s;
+    max-width: 1280px;
+    min-width: 540px;
     z-index: 5;
 }
 
@@ -42,16 +44,19 @@
 
 /* Основной контент */
 .main {
+    margin: 0 auto;
     margin-top: 100px;
     flex-wrap: nowrap;
     flex: auto;
     justify-content: start;
+    max-width: 1280px;
+    min-width: 540px;
     gap: 0;
 }
 
 .section {
     margin-top: 35px;
-    width: 70%;
+    width: 100%;
     background-color: #000;
     border-radius: 50px;
     overflow: hidden;
@@ -61,13 +66,13 @@
     transition: 0.5s;
 }
 
-@media screen and (max-width: 1024px){
-    .section, .header {
+@media screen and (width<1024px){
+    .main, .header {
         width: 95%;
     }
 
     .menu {
-        height: 60px;
+        height: 70px;
     }
 
     .main {
@@ -79,13 +84,13 @@
     }
 }
 
-@media screen and (min-width: 1024px) and (max-width: 1400px){
-    .section, .header {
+@media screen and (1024px <= width < 1400px){
+    .main, .header {
         width: 85%;
     }
 
     .menu {
-        height: 75px;
+        height: 80px;
     }
 
     .main {
@@ -97,8 +102,8 @@
     }
 }
 
-@media screen and (min-width: 1400px) and (max-width: 2560px){
-    .section, .header {
+@media screen and (1400px <= width){
+    .main, .header {
         width: 70%;
     }
 
@@ -116,7 +121,7 @@
     
 }
 
-@media screen and (min-width: 2560px){
+/* @media screen and (min-width: 2560px){
     .section, .header {
         width: 50%;
     }
@@ -132,7 +137,7 @@
     .menu_research {
         width: 85%;
     }
-}
+} */
 
 .content {
     width: 90%;
@@ -299,6 +304,7 @@
     border: 0;
     border-radius: 10px;
     width: 50%;
+    transition: 0s;
 }
 
 .button-active {
@@ -421,6 +427,8 @@
     background-color: #505050;
 }
 
+/* Карточка с описанием снаряда */
+
 .shell_window {
     display: none;
     position: absolute;
@@ -429,8 +437,9 @@
     top: -1px;
     border: 1px solid #fff;
     border-radius: 5px;
-    width: 235%;
+    width: 250%;
     background-color: #161616;
+    box-shadow: #000 0 0 100px 50px;
     z-index: 1;
 }
 
@@ -445,18 +454,30 @@
 .shell_info-primary {
     display: flex;
     text-align: center;
-    margin-top: 10px;
+    margin: 10px 0;
     padding-right: 10px;
 }
 
 .info_box {
     background-color: #000;
     margin-left: 10px;
+    width: 33%;
+}
+
+.shell_info, .shell_info-ricochet, .shell_info-penetration{
+    padding: 0 10px 10px 10px;
+}
+
+.shell_info p {
+    text-align: left;
+    line-height: 125%;
 }
 
 #M61:focus-within .shell_window {
     display: block;
 }
+
+/* Конец карточки */
 
 .choose_ammo_description {
     display: flex;
