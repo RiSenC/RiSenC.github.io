@@ -1,6 +1,5 @@
 * {
     box-sizing: border-box;
-    transition: 0.33s;
 }
 
 .icon_text {
@@ -17,46 +16,33 @@
     width: 70%;
     align-self: center;
     position: fixed;
-    max-width: 1280px;
-    min-width: 540px;
+    transition: 0.5s;
     z-index: 5;
 }
 
 .menu {
-    display: grid;
-    grid-template-columns: 0.9fr 1.2fr 0.9fr;
     background-color: #000;
     width: unset;
-    align-items: center;
-    justify-items: center;
+    justify-content: space-evenly;
 }
 
 .center_text {
     display: inline;
     margin: auto 0;
-    justify-self: center;
-}
-
-.search {
-    height: calc(25px + 25%);
-    width: calc(100px + 33%);
 }
 
 /* Основной контент */
 .main {
-    margin: 0 auto;
     margin-top: 100px;
     flex-wrap: nowrap;
     flex: auto;
     justify-content: start;
-    max-width: 1280px;
-    min-width: 540px;
     gap: 0;
 }
 
 .section {
     margin-top: 35px;
-    width: 100%;
+    width: 70%;
     background-color: #000;
     border-radius: 50px;
     overflow: hidden;
@@ -66,78 +52,29 @@
     transition: 0.5s;
 }
 
-@media screen and (width<1024px){
-    .main, .header, .technic_grid {
+@media screen and (max-width: 1024px){
+    .section, .header {
         width: 95%;
     }
-
-    .menu {
-        height: 70px;
-    }
-
-    .main {
-        margin-top: 60px;
-    }
-
-    .menu_research {
-        width: 88%;
-    }
 }
 
-@media screen and (1024px <= width < 1400px){
-    .main, .header, .technic_grid  {
+@media screen and (min-width: 1024px) and (max-width: 1400px){
+    .section, .header {
         width: 85%;
     }
-
-    .menu {
-        height: 80px;
-    }
-
-    .main {
-        margin-top: 75px;
-    }
-
-    .menu_research {
-        width: 90%;
-    }
 }
 
-@media screen and (1400px <= width){
-    .main, .header, .technic_grid {
+@media screen and (min-width: 1400px) and (max-width: 2560px){
+    .section, .header {
         width: 70%;
     }
-
-    .menu { 
-        height: 90px;
-    }
-
-    .main {
-        margin-top: 90px;
-    }
-
-    .menu_research {
-        width: 90%;
-    }
-    
 }
 
-/* @media screen and (min-width: 2560px){
+@media screen and (min-width: 2560px){
     .section, .header {
         width: 50%;
     }
-
-    .menu {
-        height: 100px;
-    }
-
-    .main {
-        margin-top: 100px;
-    }
-
-    .menu_research {
-        width: 85%;
-    }
-} */
+}
 
 .content {
     width: 90%;
@@ -304,7 +241,6 @@
     border: 0;
     border-radius: 10px;
     width: 50%;
-    transition: 0s;
 }
 
 .button-active {
@@ -378,7 +314,7 @@
     flex-direction: column;
 }
 
-.korobka_stab {
+.korobka_stab, .korobka_ammo-machine_gun {
     border-radius: 15px;
     width: 95%;
     border: 1px solid #fff;
@@ -410,15 +346,16 @@
     padding-bottom: 20px;  
 }
 
-.korobka_choose_ammo  {
-    padding: 10px;
+.korobka_choose_ammo {
     border-radius: 5px;
+    width: 15%;
     border: 1px solid #fff;
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: rgba(0, 0, 0, 0.25);
     position: relative;
+    padding: 0;
 }
 
 .korobka_choose_ammo:hover {
@@ -426,8 +363,6 @@
     border: 1px solid #fff;
     background-color: #505050;
 }
-
-/* Карточка с описанием снаряда */
 
 .shell_window {
     display: none;
@@ -437,9 +372,8 @@
     top: -1px;
     border: 1px solid #fff;
     border-radius: 5px;
-    width: 250%;
+    width: 235%;
     background-color: #161616;
-    box-shadow: #000 0 0 100px 50px;
     z-index: 1;
 }
 
@@ -454,45 +388,45 @@
 .shell_info-primary {
     display: flex;
     text-align: center;
-    margin: 10px 0;
+    margin-top: 10px;
     padding-right: 10px;
 }
 
 .info_box {
     background-color: #000;
     margin-left: 10px;
-    width: 33%;
-}
-
-.shell_info, .shell_info-ricochet, .shell_info-penetration{
-    padding: 0 10px 10px 10px;
-}
-
-.shell_info p {
-    text-align: left;
-    line-height: 125%;
 }
 
 #M61:focus-within .shell_window {
     display: block;
 }
 
-/* Конец карточки */
 
-.choose_ammo_description {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.choose_ammo_description span {
-    text-align: center;
-}
-
-.line {
+.stats_row-ammo {
     border-bottom: rgba(255,255,255,0.5) 1px dashed;
-    padding: 0;
-    margin: 0;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    margin-bottom: 10px;
+}
+
+.stats_row-ammo_penetration{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+
+.ammo_choose_colomn {
+    display: flex;
+    margin-top: 20px;
+    gap: auto;
+    justify-content: space-between;
+    width: 95%;
 }
 
 .stats_row-ammo_choose {
@@ -509,107 +443,7 @@
     border: 1px solid #fff;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content:space-around;
     background-color: rgba(0, 0, 0, 0.25);
-    z-index: 1;
     box-sizing: border-box;
-    gap: 20px
 }
-
-.korobka_ammo-machine_gun {
-    border-radius: 15px;
-    border: 1px solid #fff;
-    justify-content: space-around;
-    background-color: rgba(0, 0, 0, 0.25);
-    z-index: 1;
-    box-sizing: border-box;
-    width: 70%;
-}
-
-.machine_gun_ammo {
-    border-radius: 5px;
-    border: 1px solid #fff;
-    display: flex;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.25);
-}
-
- /* Ветка исследования */
- .header_text_research {
-    padding-top: 20px;
-    color: #fff;
-    padding: center;
-    font-size: 44px;
-    position: relative;
-    display: flex;
-}
-
-.menu_research {
-        width: 100%;
-        height: 130px;
-        top: -30px;
-        z-index: -1;
-        position: relative;
-        
-}
-
-.technic_grid { 
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    height: auto;
-    gap: 20px;
-    margin: auto;
-    padding: 20px;
-    max-width: 1280px;
-    min-width: 540px;
-    width: calc(height - 50%);
-}
-
-.technic{
-    background-color: rgba(0, 64, 96, 1);
-    border-radius: 10px;
-    display: inline-block;
-    position: relative;
-    width: 100%;
-    padding-top: 50%;
-    height: 0;
-}
-
-.main_research{
-    margin-top: 230px;
-    flex-wrap: nowrap;
-    flex: auto;
-    justify-content: start;
-    gap: 0;
-}
-
-.menu_research_two{
-    display: flex;
-    background-color: #000;
-    align-items: center;
-    justify-items: center;
-    justify-content: space-around;
-    border: #fff solid 1px;
-    border-top: 0;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
-    box-sizing: border-box;
-    font-weight: 800;
-    margin: 0 auto;
-}
-
-.none_technic{
-    background-color: none;
-    border-radius: 10px;
-    display: inline-block;
-    position: relative;
-    width: 100%;
-    padding-top: 50%;
-    height: 0;
-}
-
-
-
- /* конец ветки исследования */
-
-
