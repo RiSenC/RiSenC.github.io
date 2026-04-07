@@ -526,7 +526,7 @@
     width: 70%;
 }
 
-.machine_gun_ammo {
+.machine_gun_ammo  {
     border-radius: 5px;
     border: 1px solid #fff;
     display: flex;
@@ -542,7 +542,16 @@
     font-size: 44px;
     position: relative;
     display: flex;
+    
 }
+
+ .header_text_research_two {
+    border-radius: 5px;
+    border: 1px solid #fff;
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.25);
+ }
 
 .menu_research {
         width: 100%;
@@ -553,6 +562,7 @@
         
 }
 
+/* Начало Грида, Стрелок и фона*/
 .technic_grid { 
     display: grid;
     grid-template-columns: repeat(7, 1fr);
@@ -571,6 +581,38 @@
 
 .technic{
     background-color: rgba(0, 64, 96, 1);
+    border-radius: 10px;
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding-top: 50%;
+    height: 0;
+}
+
+
+.none_technic{
+    background-color: none;
+    border-radius: 10px;
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding-top: 50%;
+    height: 0;
+}
+
+.burse_technic{
+    background-color: rgb(136, 136, 136);
+    border-radius: 10px;
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding-top: 50%;
+    height: 0;
+}
+
+
+.gold_technic{
+    background-color: rgb(255, 251, 0);
     border-radius: 10px;
     display: inline-block;
     position: relative;
@@ -612,6 +654,10 @@
     
 }
 
+
+
+/*Конец Грида, Стрелок и фона*/
+
 .main_research{
     margin-top: 230px;
     flex-wrap: nowrap;
@@ -635,19 +681,11 @@
     margin: 0 auto;
 }
 
-.none_technic{
-    background-color: none;
-    border-radius: 10px;
-    display: inline-block;
-    position: relative;
-    width: 100%;
-    padding-top: 50%;
-    height: 0;
-}
-
 .header_research{
     height: 190px;
 }
+
+
 
 
 
