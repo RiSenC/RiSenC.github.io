@@ -555,8 +555,7 @@
 
 .menu_research {
         width: 100%;
-        height: 130px;
-        top: -30px;
+        height: 100px;
         z-index: -1;
         position: relative;
         
@@ -581,7 +580,7 @@
 
 .technic{
     background-color: rgba(0, 64, 96, 1);
-    border-radius: 10px;
+    border-radius: 1vh;
     display: inline-block;
     position: relative;
     width: 100%;
@@ -592,7 +591,7 @@
 
 .none_technic{
     background-color: none;
-    border-radius: 10px;
+    border-radius: 1vh;
     display: inline-block;
     position: relative;
     width: 100%;
@@ -602,7 +601,7 @@
 
 .burse_technic{
     background-color: rgb(136, 136, 136);
-    border-radius: 10px;
+    border-radius: 1vh;
     display: inline-block;
     position: relative;
     width: 100%;
@@ -613,7 +612,7 @@
 
 .gold_technic{
     background-color: rgb(255, 251, 0);
-    border-radius: 10px;
+    border-radius: 1vh;
     display: inline-block;
     position: relative;
     width: 100%;
@@ -681,10 +680,75 @@
     margin: 0 auto;
 }
 
+.research_menu{
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
 .header_research{
     height: 190px;
 }
 
+
+/* Стили для подзаголовка */
+.menu_research_two {
+    display: flex;
+    background-color: #000;
+    border: #fff solid 1px;
+    border-top: 0;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+}
+
+.research-labels {
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+
+.research-label {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 500;
+    padding: 15px 0;
+    background-color: #000;
+    text-align: center;
+}
+
+.researched {
+    width: 71.428571%; /* 5/7 = 71.428% - под первой секцией */
+    text-align: center;
+}
+
+.premium {
+    width: 28.571429%; /* 2/7 = 28.571% - под второй секцией */
+    text-align: center;
+}
+
+/* Вертикальная линия в подзаголовке (будет создана JS, но на всякий случай) */
+.research-labels::after {
+    content: '';
+    position: absolute;
+    left: 71.428571%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #ffffff;
+    transform: translateX(-50%);
+    z-index: 20;
+}
+
+/* Адаптив */
+@media (max-width: 768px) {
+    .research-label {
+        font-size: 14px;
+        padding: 10px 0;
+    }
+}
 
 
 

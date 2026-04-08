@@ -184,3 +184,60 @@ function baseWpnryButton() {
 
 
 
+
+
+// ========== ЛИНИЯ ОТ ПОДЗАГОЛОВКА ДО НИЗА ==========
+function addLine() {
+    // Удаляем старую линию
+    const oldLine = document.getElementById('my-line');
+    if (oldLine) oldLine.remove();
+    
+    // Находим подзаголовок
+    const menuResearchTwo = document.querySelector('.menu_research_two');
+    if (!menuResearchTwo) return;
+    
+    // Находим все гриды
+    const grids = document.querySelectorAll('.technic_grid');
+    if (grids.length === 0) return;
+    
+    // Позиция по X (между 5 и 6 колонкой)
+    const firstGrid = grids[0];
+    const items = firstGrid.children;
+    if (items.length < 6) return;
+    
+    const fifthItem = items[4];
+    const sixthItem = items[5];
+    const fifthRect = fifthItem.getBoundingClientRect();
+    const sixthRect = sixthItem.getBoundingClientRect();
+    const lineX = (fifthRect.right + sixthRect.left) / 2;
+    
+    // Начало - верх подзаголовка
+    const menuRect = menuResearchTwo.getBoundingClientRect();
+    const startY = menuRect.top;
+    
+    // Конец - низ последнего грида
+    const lastGrid = grids[grids.length - 1];
+    const lastGridRect = lastGrid.getBoundingClientRect();
+    const endY = lastGridRect.bottom;
+    
+    // Создаём линию
+    const line = document.createElement('div');
+    line.id = 'my-line';
+    line.style.cssText = `
+        position: fixed;
+        left: ${lineX}px;
+        top: ${startY}px;
+        width: 2px;
+        height: ${endY - startY}px;
+        background-color: #ffffff;
+        z-index: 9999;
+        pointer-events: none;
+    `;
+    document.body.appendChild(line);
+}
+
+// Запуск
+document.addEventListener('DOMContentLoaded', () => setTimeout(addLine, 100));
+window.addEventListener('load', () => setTimeout(addLine, 100));
+window.addEventListener('resize', () => setTimeout(addLine, 100));
+window.addEventListener('scroll', () => requestAnimationFrame(addLine));
