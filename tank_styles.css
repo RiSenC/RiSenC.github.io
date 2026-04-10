@@ -750,7 +750,30 @@
     }
 }
 
+.tank_name {
+    position: absolute;
+    top: 5%;    /* отступ от верхнего края */
+    right: 10px;  /* отступ от правого края */
+    text-align: right; /* выравнивание строк текста по правому краю */
+    color: rgb(0, 0, 0); /* Цвет текста */
+    font-size: 10px;
+    padding-top: 0;
+    z-index: 2;
+    margin: 0;
+}
 
+.tank_br {
+    position: absolute;
+    top: 70%;    /* отступ от верхнего края */
+    right: 10px;  /* отступ от правого края */
+    left: 20%;
+    text-align: right; /* выравнивание строк текста по правому краю */
+    color: rgb(0, 0, 0); /* Цвет текста */
+    font-size: 10px;
+    padding-top: 0;
+    z-index: 25;
+    margin: 0;
+}
 
 
  /* конец ветки исследования */

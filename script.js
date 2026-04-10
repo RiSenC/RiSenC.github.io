@@ -185,6 +185,7 @@ function baseWpnryButton() {
 
 
 
+// ========== Ветка исследования ==========
 
 // ========== ЛИНИЯ ОТ ПОДЗАГОЛОВКА ДО НИЗА ==========
 function addLine() {
@@ -241,3 +242,4 @@ document.addEventListener('DOMContentLoaded', () => setTimeout(addLine, 100));
 window.addEventListener('load', () => setTimeout(addLine, 100));
 window.addEventListener('resize', () => setTimeout(addLine, 100));
 window.addEventListener('scroll', () => requestAnimationFrame(addLine));
+
