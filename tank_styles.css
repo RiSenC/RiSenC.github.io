@@ -75,6 +75,10 @@
         height: 70px;
     }
 
+    .technic_grid{
+        gap: 10px;
+    }
+
     .main {
         margin-top: 60px;
     }
@@ -93,6 +97,10 @@
         height: 80px;
     }
 
+    .technic_grid{
+        gap: 20px;
+    }
+
     .main {
         margin-top: 75px;
     }
@@ -109,6 +117,10 @@
 
     .menu { 
         height: 90px;
+    }
+    
+    .technic_grid{
+        gap: 30px;
     }
 
     .main {
@@ -658,7 +670,7 @@
 /*Конец Грида, Стрелок и фона*/
 
 .main_research{
-    margin-top: 230px;
+    margin-top: 190px;
     flex-wrap: nowrap;
     flex: auto;
     justify-content: start;
@@ -686,7 +698,7 @@
 }
 
 .header_research{
-    height: 190px;
+    height: 180px;
 }
 
 
@@ -775,6 +787,74 @@
     margin: 0;
 }
 
+
+/* Добавление надписи ранга над гридом */
+.technic_grid {
+    margin-top: 0px;
+    position: relative;
+}
+
+.technic_grid:first-child {
+    margin-top: 0;
+}
+
+.technic_grid:first-child::before {
+    content: '1 ранг';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+    z-index: 10;
+}
+
+.technic_grid:nth-child(2)::before {
+    content: '2 ранг';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+    z-index: 10;
+}
+
+.technic_grid:nth-child(3)::before {
+    content: '3 ранг';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+    z-index: 10;
+}
+
+@media (max-width: 768px) {
+    .technic_grid::before {
+        top: -25px !important;
+        font-size: 14px !important;
+    }
+}
+
+@media screen and (width<1024px){
+    .technic_grid{
+        gap: 15px;
+    }
+}
+
+@media screen and (1024px <= width < 1400px){
+    .technic_grid{
+        gap: 20px;
+    }
+}
+
+@media screen and (1400px <= width){
+    .technic_grid{
+        gap: 30px;
+    }
+}
 
  /* конец ветки исследования */
 
