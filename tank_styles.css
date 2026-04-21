@@ -831,16 +831,81 @@
     z-index: 10;
 }
 
+.technic_grid:nth-child(4)::before {
+    content: '4 ранг';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+    z-index: 10;
+}
+
+
+.technic_grid:nth-child(5)::before {
+    content: '5 ранг';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+    z-index: 10;
+}
+
+
+.technic_grid:nth-child(6)::before {
+    content: '6 ранг';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+    z-index: 10;
+}
+
+
+.technic_grid:nth-child(7)::before {
+    content: '7 ранг';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+    z-index: 10;
+}
+
+.technic_grid:nth-child(8)::before {
+    content: '8 ранг';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+    z-index: 10;
+}
+
+
 @media (max-width: 768px) {
     .technic_grid::before {
-        top: -25px !important;
         font-size: 14px !important;
+    }
+
+    .technic_grid{
+        top: -20px;
     }
 }
 
 @media screen and (width<1024px){
     .technic_grid{
         gap: 15px;
+    }
+    .technic_grid{
+        top: -15px;
     }
 }
 
