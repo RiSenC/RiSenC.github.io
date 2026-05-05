@@ -1,0 +1,304 @@
+h1 {
+    margin: 0;
+    font-size: 1.5vw;
+} 
+.main {
+    color: white;
+    margin: 0;
+    padding: 0;
+    justify-content: start;
+    grid-template-columns: 5fr 2fr;
+    gap: 0;
+    margin: 0 auto;
+    display: block;
+}
+
+.menu{
+    width:90vw;
+    z-index: 0;
+}
+
+.first_rank {
+
+    width: 100%;
+}
+
+.types_of_technic {
+    border-bottom: white solid 0.15vh;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    width: 85vw;
+}
+
+
+
+
+
+.type {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 85vw;
+    height: 5.25vh;
+    border-bottom: 0.15vh white solid;
+    z-index: 25;
+    margin: 0 auto;
+    border-left: 0.15vh white solid  ;
+    border-right: 0.15vh white solid  ;
+    border-bottom-left-radius: 1vw ;
+    border-bottom-right-radius: 1vw ;
+}
+
+.first_rank .second_rank{
+    width: 85vw;
+    margin: 12.5vw;
+}
+
+.type_text {
+    color: white;
+    font-size: 2.5vw;
+}
+
+.rank_text {
+    margin: 0 1vw 0.25vw;
+}
+
+.rank {
+    border-bottom: white solid 0.15vw;
+    position: relative;
+    width: 85vw;
+}
+
+.tank_sell {
+    width: 230px;
+    height: 115px;
+}
+
+.technic_grid { 
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2vw;
+    height: auto;
+    margin: 0 auto ;
+    width: 85vw;
+    margin: 0 0 2vw 0;
+}
+
+
+
+.technic_image {
+    width: 100%;
+    height: auto;
+    object-position:right;
+    z-index: 10;
+    position: absolute;
+    top: 0;
+}
+
+
+.mini_technic_image{
+    background-color: none;
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    top: 40px;
+    object-position:left;
+    z-index: 12;
+}
+
+.technic_technic_image{
+    width:100%;
+    height:100%;
+    position: absolute;
+    object-position:right;
+    z-index: 0;
+    left: 40px;
+    
+}
+
+.div_technic{
+
+    background-color: rgba(0, 64, 96, 1);
+    border-radius: 1vw;
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding-top: 50%;
+    height: 0;
+}
+
+.tank_name {
+    position: absolute;
+    top: 0.3vw;    /* отступ от верхнего края */
+    right: 0.3vw;  /* отступ от правого края */
+    text-align: right; /* выравнивание строк текста по правому краю */
+    color: white; /* Цвет текста */
+    font-size: 0.9vw;
+    padding-top: 0;
+    z-index: 2;
+    margin: 0;
+}
+
+.tank_br {
+    position: absolute;
+    top: 6vw;    /* отступ от верхнего края */
+    right: 0.3vw;  /* отступ от правого края */
+    text-align: right; /* выравнивание строк текста по правому краю */
+    color: white; /* Цвет текста */
+    font-size: 0.9vw;
+    padding-top: 0;
+    z-index: 25;
+    margin: 0;
+}
+
+.img{
+    object-fit: scale-down;
+}
+
+.premium {
+    position: absolute;
+    right: -20vw;
+    background-color: rgb(236, 186, 46);
+    z-index: 25;
+    transition: 0.25s;
+    text-align: left;
+    top: 100px;
+    width: 844px;
+    padding: 0;
+    border: 0;
+    outline: 1px white solid;
+}
+
+.premium:focus-within{
+    transform: translateX(-35vw);
+}
+
+a {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    display: block;
+    width: 2142;
+    height: auto;
+}
+
+.technic_grid_prem {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    height: calc(100% - 28px);
+    margin: 0 10px 20px;
+}
+
+h1, h2, h3, h4, h5, h6, p, span {
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    padding: 0;
+    margin:0;
+    background-color: black;
+    height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+@media screen and (max-width: 425px){
+    .type, .menu .headers {
+        height: 3vh;
+    }
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    height: 10vh;
+    border: #fff solid 0.15vh;
+    border-top: 0;
+    border-bottom-left-radius: 1vw;
+    border-bottom-right-radius: 1vw;
+    box-sizing: border-box;
+    font-weight: 800;
+    margin: 0 auto;
+    padding-inline-start: 0px;
+}
+
+.header_block {
+    display: flex;
+    flex-direction: column;
+    column-gap: 0;
+    justify-content: center;
+}
+
+.header_text {
+    color: #fff;
+    font-size: 1vw;
+}
+
+p {
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.tanks_text {
+    font-size: 1.75vw;
+}
+
+.wiki_text {
+    font-size: 3.5vw;
+}
+
+.header_text {
+    font-size: 3.5vw;
+}
+
+.main {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    column-gap: 47px;
+    flex-wrap: nowrap;
+    gap: 48px;
+}
+
+.flag-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 47px;
+    width: 100%;
+}
+
+.nation_flag {
+    width: 252px;
+    height: 162px;
+    font-size: 40px;
+    padding: 0;
+}
+
+.flag-img {
+    width: 250px;
+    height: 120px;
+    border: #fff solid 1px;
+    border-radius: 10px;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+}
+
