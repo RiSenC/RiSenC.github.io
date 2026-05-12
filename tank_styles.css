@@ -725,7 +725,7 @@
 .research-label {
     color: #fff;
     font-size: 24px;
-    font-weight: 500;
+    font-weight: 520;
     padding: 15px 0;
     background-color: #000;
     text-align: center;
@@ -741,18 +741,7 @@
     text-align: center;
 }
 
-/* Вертикальная линия в подзаголовке (будет создана JS, но на всякий случай) */
-.research-labels::after {
-    content: '';
-    position: absolute;
-    left: 71.428571%;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background-color: #ffffff;
-    transform: translateX(-50%);
-    z-index: 20;
-}
+
 
 /* Адаптив */
 @media (max-width: 768px) {
@@ -948,14 +937,17 @@
     content: none !important;
 }
 
-/* Стили для новых коннекторов */
+/* Обновите стили для коннекторов в tank_styles.css */
 .grid-connector,
 .grid-connector-between {
     pointer-events: none;
     position: absolute;
+    box-sizing: content-box;
 }
 
 .connector-arrow {
     position: absolute;
     z-index: 16;
+    /* Стрелка будет точно на конце линии */
+    bottom: 0;
 }

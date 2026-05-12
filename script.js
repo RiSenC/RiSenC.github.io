@@ -255,9 +255,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const grids = document.querySelectorAll('.technic_grid');
         
         grids.forEach((grid, gridIndex) => {
-            // Пропускаем первый грид (индекс 0)
-            if (gridIndex === 0) return;
-            
             const technicElements = Array.from(grid.querySelectorAll('.technic'));
             
             // Группируем элементы по колонкам
@@ -284,7 +281,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
                 
                 // Соединяем последний элемент колонки с первым элементом в следующем гриде
-                if (gridIndex < grids.length - 1 && columnElements.length > 0) {
+                // НО только если это НЕ первый грид (индекс 0) и не последний грид
+                if (gridIndex > 0 && gridIndex < grids.length - 1 && columnElements.length > 0) {
                     const lastElement = columnElements[columnElements.length - 1];
                     const nextGrid = grids[gridIndex + 1];
                     const nextGridTechnicElements = Array.from(nextGrid.querySelectorAll('.technic'));
@@ -407,6 +405,7 @@ document.addEventListener('DOMContentLoaded', function() {
         return closestElement;
     }
     
+    // Замените только функции createConnectorBetweenElements и createConnectorBetweenGrids
     function createConnectorBetweenElements(topElement, bottomElement, grid) {
         const connector = document.createElement('div');
         connector.className = 'grid-connector';
@@ -433,12 +432,12 @@ document.addEventListener('DOMContentLoaded', function() {
             pointer-events: none;
         `;
         
-        // Добавляем стрелку внизу
+        // Добавляем стрелку внизу, но не выходя за пределы высоты
         const arrow = document.createElement('div');
         arrow.className = 'connector-arrow';
         arrow.style.cssText = `
             position: absolute;
-            bottom: -5px;
+            bottom: 0px;
             left: 50%;
             transform: translateX(-50%);
             width: 0;
@@ -451,7 +450,7 @@ document.addEventListener('DOMContentLoaded', function() {
         connector.appendChild(arrow);
         grid.appendChild(connector);
     }
-    
+
     function createConnectorBetweenGrids(topElement, bottomElement, topGrid) {
         const connector = document.createElement('div');
         connector.className = 'grid-connector-between';
@@ -461,7 +460,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         const left = topRect.left + topRect.width / 2 - gridRect.left;
         const top = topRect.bottom - gridRect.top;
-        const height = gridRect.bottom - topRect.bottom + 15;
+        const height = gridRect.bottom - topRect.bottom + 20;
         
         connector.style.cssText = `
             position: absolute;
@@ -474,12 +473,12 @@ document.addEventListener('DOMContentLoaded', function() {
             pointer-events: none;
         `;
         
-        // Добавляем стрелку внизу
+        // Добавляем стрелку внизу, но не выходя за пределы высоты
         const arrow = document.createElement('div');
         arrow.className = 'connector-arrow';
         arrow.style.cssText = `
             position: absolute;
-            bottom: -5px;
+            bottom: 0px;
             left: 50%;
             transform: translateX(-50%);
             width: 0;
