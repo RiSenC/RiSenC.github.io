@@ -245,3 +245,266 @@ window.addEventListener('scroll', () => requestAnimationFrame(addLine));
 
 
 
+
+// Полностью замените содержимое script.js
+document.addEventListener('DOMContentLoaded', function() {
+    function createConnectors() {
+        // Удаляем все старые коннекторы
+        document.querySelectorAll('.grid-connector, .grid-connector-between').forEach(el => el.remove());
+        
+        const grids = document.querySelectorAll('.technic_grid');
+        
+        grids.forEach((grid, gridIndex) => {
+            // Пропускаем первый грид (индекс 0)
+            if (gridIndex === 0) return;
+            
+            const technicElements = Array.from(grid.querySelectorAll('.technic'));
+            
+            // Группируем элементы по колонкам
+            const columns = groupByColumns(technicElements);
+            
+            // Для каждой колонки создаем соединения
+            columns.forEach(columnElements => {
+                // Сортируем по вертикали (сверху вниз)
+                columnElements.sort((a, b) => {
+                    const aRect = a.getBoundingClientRect();
+                    const bRect = b.getBoundingClientRect();
+                    return aRect.top - bRect.top;
+                });
+                
+                // Соединяем последовательные элементы в колонке
+                for (let i = 0; i < columnElements.length - 1; i++) {
+                    const topElement = columnElements[i];
+                    const bottomElement = columnElements[i + 1];
+                    
+                    // Проверяем, что между ними нет других элементов
+                    if (!hasElementsBetween(topElement, bottomElement, grid)) {
+                        createConnectorBetweenElements(topElement, bottomElement, grid);
+                    }
+                }
+                
+                // Соединяем последний элемент колонки с первым элементом в следующем гриде
+                if (gridIndex < grids.length - 1 && columnElements.length > 0) {
+                    const lastElement = columnElements[columnElements.length - 1];
+                    const nextGrid = grids[gridIndex + 1];
+                    const nextGridTechnicElements = Array.from(nextGrid.querySelectorAll('.technic'));
+                    
+                    // Ищем элемент в той же колонке в следующем гриде
+                    const nextElement = findElementInSameColumn(lastElement, nextGridTechnicElements);
+                    
+                    // Проверяем, что следующий элемент существует и это technic
+                    if (nextElement && 
+                        nextElement.classList.contains('technic') &&
+                        !nextElement.classList.contains('none_technic') &&
+                        !nextElement.classList.contains('gold_technic') &&
+                        !nextElement.classList.contains('burse_technic')) {
+                        createConnectorBetweenGrids(lastElement, nextElement, grid);
+                    }
+                }
+            });
+        });
+    }
+    
+    function groupByColumns(elements) {
+        const columns = [];
+        const processed = new Set();
+        
+        elements.forEach(element => {
+            // Пропускаем элементы, которые не являются чистыми technic
+            if (!element.classList.contains('technic') ||
+                element.classList.contains('none_technic') ||
+                element.classList.contains('gold_technic') ||
+                element.classList.contains('burse_technic')) {
+                return;
+            }
+            
+            if (processed.has(element)) return;
+            
+            const column = [element];
+            processed.add(element);
+            
+            const elementRect = element.getBoundingClientRect();
+            const elementCenter = elementRect.left + elementRect.width / 2;
+            
+            // Ищем другие элементы в той же колонке
+            elements.forEach(otherElement => {
+                if (processed.has(otherElement) || otherElement === element) return;
+                
+                // Проверяем, что это чистый technic элемент
+                if (!otherElement.classList.contains('technic') ||
+                    otherElement.classList.contains('none_technic') ||
+                    otherElement.classList.contains('gold_technic') ||
+                    otherElement.classList.contains('burse_technic')) {
+                    return;
+                }
+                
+                const otherRect = otherElement.getBoundingClientRect();
+                const otherCenter = otherRect.left + otherRect.width / 2;
+                
+                // Если элементы в одной колонке (с погрешностью 50px)
+                if (Math.abs(elementCenter - otherCenter) < 50) {
+                    column.push(otherElement);
+                    processed.add(otherElement);
+                }
+            });
+            
+            if (column.length > 0) {
+                columns.push(column);
+            }
+        });
+        
+        return columns;
+    }
+    
+    function hasElementsBetween(topElement, bottomElement, grid) {
+        const topRect = topElement.getBoundingClientRect();
+        const bottomRect = bottomElement.getBoundingClientRect();
+        const topCenter = topRect.left + topRect.width / 2;
+        
+        // Получаем все элементы в гриде
+        const allElements = Array.from(grid.querySelectorAll('div'));
+        
+        return allElements.some(element => {
+            // Пропускаем сами сравниваемые элементы
+            if (element === topElement || element === bottomElement) return false;
+            
+            const elementRect = element.getBoundingClientRect();
+            const elementCenter = elementRect.left + elementRect.width / 2;
+            
+            // Проверяем, находится ли элемент между ними по вертикали и в той же колонке
+            return Math.abs(topCenter - elementCenter) < 50 &&
+                   elementRect.top > topRect.bottom &&
+                   elementRect.bottom < bottomRect.top;
+        });
+    }
+    
+    function findElementInSameColumn(currentElement, nextGridElements) {
+        const currentRect = currentElement.getBoundingClientRect();
+        const currentCenter = currentRect.left + currentRect.width / 2;
+        
+        let closestElement = null;
+        let minDistance = Infinity;
+        
+        nextGridElements.forEach(element => {
+            // Проверяем, что это чистый technic элемент
+            if (!element.classList.contains('technic') ||
+                element.classList.contains('none_technic') ||
+                element.classList.contains('gold_technic') ||
+                element.classList.contains('burse_technic')) {
+                return;
+            }
+            
+            const elementRect = element.getBoundingClientRect();
+            const elementCenter = elementRect.left + elementRect.width / 2;
+            const distance = Math.abs(currentCenter - elementCenter);
+            
+            if (distance < 50 && distance < minDistance) {
+                minDistance = distance;
+                closestElement = element;
+            }
+        });
+        
+        return closestElement;
+    }
+    
+    function createConnectorBetweenElements(topElement, bottomElement, grid) {
+        const connector = document.createElement('div');
+        connector.className = 'grid-connector';
+        
+        const gridRect = grid.getBoundingClientRect();
+        const topRect = topElement.getBoundingClientRect();
+        const bottomRect = bottomElement.getBoundingClientRect();
+        
+        const left = topRect.left + topRect.width / 2 - gridRect.left;
+        const top = topRect.bottom - gridRect.top;
+        const height = bottomRect.top - topRect.bottom;
+        
+        // Создаем линию только если есть расстояние между элементами
+        if (height <= 0) return;
+        
+        connector.style.cssText = `
+            position: absolute;
+            left: ${left}px;
+            top: ${top}px;
+            width: 2px;
+            height: ${height}px;
+            background-color: #ffffff;
+            z-index: 15;
+            pointer-events: none;
+        `;
+        
+        // Добавляем стрелку внизу
+        const arrow = document.createElement('div');
+        arrow.className = 'connector-arrow';
+        arrow.style.cssText = `
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 8px solid #ffffff;
+        `;
+        
+        connector.appendChild(arrow);
+        grid.appendChild(connector);
+    }
+    
+    function createConnectorBetweenGrids(topElement, bottomElement, topGrid) {
+        const connector = document.createElement('div');
+        connector.className = 'grid-connector-between';
+        
+        const gridRect = topGrid.getBoundingClientRect();
+        const topRect = topElement.getBoundingClientRect();
+        
+        const left = topRect.left + topRect.width / 2 - gridRect.left;
+        const top = topRect.bottom - gridRect.top;
+        const height = gridRect.bottom - topRect.bottom + 15;
+        
+        connector.style.cssText = `
+            position: absolute;
+            left: ${left}px;
+            top: ${top}px;
+            width: 2px;
+            height: ${height}px;
+            background-color: #ffffff;
+            z-index: 15;
+            pointer-events: none;
+        `;
+        
+        // Добавляем стрелку внизу
+        const arrow = document.createElement('div');
+        arrow.className = 'connector-arrow';
+        arrow.style.cssText = `
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 8px solid #ffffff;
+        `;
+        
+        connector.appendChild(arrow);
+        topGrid.appendChild(connector);
+    }
+    
+    // Создаем коннекторы после полной загрузки
+    setTimeout(createConnectors, 300);
+    
+    // Пересоздаем при изменении размера окна
+    let resizeTimeout;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(createConnectors, 300);
+    });
+    
+    // Пересоздаем при изменении ориентации
+    window.addEventListener('orientationchange', () => {
+        setTimeout(createConnectors, 400);
+    });
+});

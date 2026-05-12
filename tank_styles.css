@@ -924,3 +924,38 @@
  /* конец ветки исследования */
 
 
+
+
+/* Полностью убираем все псевдоэлементы для не-technic элементов */
+.none_technic::after,
+.none_technic::before,
+.gold_technic::after,
+.gold_technic::before,
+.burse_technic::after,
+.burse_technic::before,
+.Polk_technic::after,
+.Polk_technic::before,
+.bursetechnic::after,
+.bursetechnic::before {
+    display: none !important;
+    content: none !important;
+}
+
+/* Убираем старые стрелки у technic */
+.technic.arrow-down::after,
+.technic.arrow-down::before {
+    display: none !important;
+    content: none !important;
+}
+
+/* Стили для новых коннекторов */
+.grid-connector,
+.grid-connector-between {
+    pointer-events: none;
+    position: absolute;
+}
+
+.connector-arrow {
+    position: absolute;
+    z-index: 16;
+}
