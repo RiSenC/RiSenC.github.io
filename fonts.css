@@ -65,7 +65,13 @@ h1, h2, h3, h4, h5, h6 {
     .table_subtext {
         color: #aaa;
         font-size: 8px;
+    }   
+
+    .card_main {
+        font-size: 11px;
+        font-weight: 380;
     }
+
 }
 
 @media (1024px <= width < 1400px){
@@ -123,6 +129,11 @@ h1, h2, h3, h4, h5, h6 {
         color: #aaa;
         font-size: 10px;
     }
+
+    .card_main {
+        font-size: 14px;
+        font-weight: 480;
+    }
 }
 
 @media (min-width: 1400px){
@@ -174,6 +185,11 @@ h1, h2, h3, h4, h5, h6 {
     .table_subtext {
         color: #aaa;
         font-size: 12px;
+    }
+
+    .card_main {
+        font-size: 16px;
+        font-weight: 550;
     }
 }
 

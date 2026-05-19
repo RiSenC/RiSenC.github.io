@@ -441,14 +441,14 @@
 /* Карточка с описанием снаряда */
 
 .shell_window {
-    display: none;
+    /* display: none; */
     position: absolute;
     left: -0.5px;
     text-align: left;
     top: -1px;
     border: 1px solid #fff;
     border-radius: 5px;
-    width: 250%;
+    width: 300%;
     background-color: #161616;
     box-shadow: #000 0 0 100px 50px;
     z-index: 1;
@@ -472,20 +472,67 @@
 .info_box {
     background-color: #000;
     margin-left: 10px;
+    padding: 10px 0;
     width: 33%;
 }
 
-.shell_info, .shell_info-ricochet, .shell_info-penetration{
-    padding: 0 10px 10px 10px;
+.shell_info, .shell_info-variations{
+    padding: 0 10px;
+    margin-bottom: 10px;
 }
 
-.shell_info p {
+.shell_window p {
     text-align: left;
     line-height: 125%;
 }
 
+.shell_info-header {
+    background-color: #000;
+    padding: 5px 10px;
+}
+
+.shell_info-3columns {
+    display: flex;
+    margin: 5px 0;
+}
+
+.shell_info-3columns div {
+    border-left: 1px solid #7f7f7f;
+    width: 100%;
+    text-align: center;
+}
+
+.shell_info-3columns div:first-child {
+    border-left: none;
+}
+
+.shell_info-variations .aaa {
+    border-bottom: 1px solid #7f7f7f;
+    margin: 5px 0;
+    padding-bottom: 5px;
+}
+
+.shell_info-variations .aaa:last-child {
+    border-bottom: none;
+}
+
 #M61:focus-within .shell_window {
     display: block;
+}
+
+.grid_ammo{
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(7,1fr);
+}
+
+.border_topnbottom {
+    border-top: 1px solid #7f7f7f;
+    border-bottom: 1px solid #7f7f7f;
+}
+
+.border_right {
+    border-right: 1px solid #7f7f7f;
 }
 
 /* Конец карточки */
