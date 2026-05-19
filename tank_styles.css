@@ -506,24 +506,25 @@
     border-left: none;
 }
 
-.shell_info-variations .aaa {
+.shell_info-variations .variation {
     border-bottom: 1px solid #7f7f7f;
     margin: 5px 0;
     padding-bottom: 5px;
 }
 
-.shell_info-variations .aaa:last-child {
+.shell_info-variations .variation:last-child {
     border-bottom: none;
 }
 
-#M61:focus-within .shell_window {
-    display: block;
-}
-
-.grid_ammo{
+.kinetic-table{
+    margin-top: 5px;
     display: grid;
     text-align: center;
     grid-template-columns: repeat(7,1fr);
+}
+
+.kinetic-table span {
+    padding: 5px;
 }
 
 .border_topnbottom {
@@ -533,6 +534,10 @@
 
 .border_right {
     border-right: 1px solid #7f7f7f;
+}
+
+#M61:focus-within .shell_window {
+    display: block;
 }
 
 /* Конец карточки */
