@@ -422,6 +422,7 @@
 }
 
 .korobka_choose_ammo  {
+    width: 19%;
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #fff;
@@ -438,10 +439,18 @@
     background-color: #505050;
 }
 
+.shell_img_container {
+    width: 75%;
+}
+
+.shell_img {
+    width: 100%;
+}
+
 /* Карточка с описанием снаряда */
 
 .shell_window {
-    /* display: none; */
+    display: none;
     position: absolute;
     left: -0.5px;
     text-align: left;
@@ -556,6 +565,11 @@
     border-bottom: rgba(255,255,255,0.5) 1px dashed;
     padding: 0;
     margin: 0;
+}
+
+.machine-gun_grid {
+    display: grid;
+    grid-template-columns: 20% 20% 60%;
 }
 
 .stats_row-ammo_choose {

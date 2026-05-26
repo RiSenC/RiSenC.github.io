@@ -307,8 +307,8 @@
                                     <!-- Сплошной M72 -->
                                     <div class="korobka_choose_ammo">
                                         <!-- Изображение -->
-                                        <div >
-                                            <img src="./img/main_ammo/Rectangle 229.png">
+                                        <div class="shell_img_container">
+                                            <img class="shell_img" src="./img/main_ammo/Rectangle 120.png">
                                         </div>  
                                         <div class="choose_ammo_description">  
                                             <!-- Описание снаряда -->
@@ -322,8 +322,8 @@
                                     <!-- Фугасный M48 -->
                                     <div class="korobka_choose_ammo">
                                         <!-- Изображение -->
-                                        <div >
-                                            <img src="./img/main_ammo/Rectangle 148.png">
+                                        <div class="shell_img_container">
+                                            <img class="shell_img" src="./img/main_ammo/Rectangle 148.png">
                                         </div>  
                                         <div class="choose_ammo_description"> 
                                             <!-- Описание снаряда -->
@@ -337,8 +337,8 @@
                                     <!-- Каморник M61 -->
                                     <button class="korobka_choose_ammo" id="M61">
                                         <!-- Изображение -->
-                                        <div>
-                                            <img src="./img/main_ammo/Rectangle 229.png">
+                                        <div class="shell_img_container">
+                                            <img class="shell_img" src="./img/main_ammo/Rectangle 229.png">
                                         </div>  
                                         <div class="choose_ammo_description">  
                                             <!-- Описание снаряда -->
@@ -380,7 +380,7 @@
                                             </div>
                                             <div class="shell_info-ricochet">
                                                 <div class="shell_info-header">
-                                                    <span class="table_regular_thin">Угол встречи с вероятностью рикошета</span>
+                                                    <span class="thin">Угол встречи с вероятностью рикошета</span>
                                                 </div>
                                                 <div class="shell_info-3columns">
                                                     <div><span class="card_main">48°</span><span class="table_small"> - 0%</span></div>
@@ -390,7 +390,7 @@
                                             </div>
                                             <div class="shell_info-penetration">
                                                 <div class="shell_info-header">
-                                                    <span class="table_regular_thin">Бронепробиваемость</span>
+                                                    <span class="thin">Бронепробиваемость</span>
                                                 </div>
                                                 <div class="shell_info-variations">
                                                     <div class="varitaion">
@@ -440,8 +440,8 @@
                                     <!-- Подклалиберный T45 -->
                                     <div class="korobka_choose_ammo">
                                         <!-- Изображение -->
-                                        <div >
-                                            <img src="./img/main_ammo/Rectangle 230.png">
+                                        <div class="shell_img_container">
+                                            <img class="shell_img" src="./img/main_ammo/Rectangle 230.png">
                                         </div>  
                                         <div class="choose_ammo_description">    
                                             <!-- Описание снаряда -->
@@ -455,8 +455,8 @@
                                     <!-- Дымовой M89 -->
                                     <div class="korobka_choose_ammo">
                                         <!-- Изображение -->
-                                        <div >
-                                            <img src="./img/main_ammo/Rectangle 231.png">
+                                        <div class="shell_img_container">
+                                            <img class="shell_img" src="./img/main_ammo/Rectangle 231.png">
                                         </div>  
                                         <div class="choose_ammo_description">    
                                             <!-- Описание снаряда -->
@@ -528,12 +528,10 @@
                         <!-- Лента -->
                         <div class="korobka_ammo-machine_gun">
                             <!-- Заголовки -->
-                            <div class="korobka_ammo-machine_gun-shapka">
+                            <div class="machine-gun_grid machine-gun_header">
                                 <!-- Лента -->
-                                <div style="border: 0; gap:90px;" class="machine_gun_ammo">
-                                    <span style="padding-left: 40px;" class="table_white">Состав</span>
-                                    <span class="table_white">Лента</span>
-                                </div>
+                                <span class="table_white">Состав</span>
+                                <span class="table_white">Лента</span>
                                 <!-- Бронепробиваемость и расстояние -->
                                 <div>
                                     <!-- Бронепробиваемость на расстоянии -->
@@ -550,24 +548,20 @@
                                 </div>
                             </div>
                             <!-- Описание -->
-                            <div class="">
+                            <div class="machine-gun_grid">
                                 <!-- Название ленты и изображение -->
-                                <div style="border: 0" class="machine_gun_ammo">
-                                    <div>
-                                        <img style="padding-left: 10px;" src="./img/machine_gun_ammo/БТ.png">
-                                    </div>
-                                    <div style="justify-content: flex-start;" class="stats_row stats_sub_section">
-                                        <span style="gap: 0;" class="table_white">Стандарт</span>
-                                        <span style="margin-left: 100px;" class="table_white">БЗТ/З/Б</span>
-                                    </div>
-                                    <div style="margin-right: 85px; gap: 0px; width: 45%;" class="stats_row stats_sub_section">
-                                        <span class="table_white">13</span>
-                                        <span class="table_white">12</span>
-                                        <span class="table_white">7</span>
-                                        <span class="table_white">3</span>
-                                        <span class="table_white">2</span>
-                                        <span class="table_white">0</span>
-                                    </div>
+                                <div>
+                                    <img src="./img/machine_gun_ammo/БТ.png">
+                                    <span class="table_white">Стандарт</span>
+                                </div>
+                                <span class="table_white">БЗТ/З/Б</span>
+                                <div class="stats_row stats_sub_section">
+                                    <span class="table_white">13</span>
+                                    <span class="table_white">12</span>
+                                    <span class="table_white">7</span>
+                                    <span class="table_white">3</span>
+                                    <span class="table_white">2</span>
+                                    <span class="table_white">0</span>
                                 </div>
                             </div>
                         </div>
