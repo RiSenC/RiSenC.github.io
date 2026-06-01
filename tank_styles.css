@@ -289,6 +289,13 @@
     justify-content: center;
 }
 
+.section-naming {
+    position: absolute;
+    left: 2%;
+    top: -4.5%;
+    background-color: #000;
+}
+
 /* Секция статов */
 .stats {
     display: flex;
@@ -387,6 +394,7 @@
     background-color: rgba(0, 0, 0, 0.25);
     z-index: 1;
     flex-direction: column;
+    position: relative;
 }
 
 .korobka_stab {
@@ -521,7 +529,7 @@
     background-color: #000;
     margin-left: 10px;
     padding: 10px 0;
-    width: 33%;
+    width: -webkit-fill-available;
 }
 
 .shell_info, .shell_info-variations{
@@ -587,6 +595,7 @@
 .shell_card:focus-within .shell_window {
     width: 300%;
     display: block;
+    user-select: text;
 }
 
 .shell_card:focus-within .shell_window:hover {
