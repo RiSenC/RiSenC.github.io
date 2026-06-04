@@ -6,73 +6,75 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fonts.css"></link>
     <link rel="stylesheet" href="style.css"></link>
+    <link rel="stylesheet" href="tank_styles.css"></link>
     <title>Главная</title>
 </head>
 <body>
-    <header class="header">
-        <nav class="menu">
-            <a href="index.html" class="header_notcenter_text header_block">
-                <span class="tanks_text">Tanks</span>
-                <span class="wiki_text">Wiki</span>
-            </a>
-            <div class="center_text header_block">
-                <a href="#0"></a>
-                <p class="header_text">Главная</p>
-            </div>
-            <a href="index.html" class="header_notcenter_text header_block">
-                <span class="tanks_text">Tanks</span>
-                <span class="wiki_text">Wiki</span>
-            </a>
-        </nav>
+    <header class=" header header_research ">
+        <!-- Заголовок -->
+        <header class="header">
+            <nav class="menu">
+                <a href="index.html" class="header_block">
+                    <span class="small_heading">Tanks</span>
+                    <span class="small_heading">Wiki</span>
+                </a>
+                <div class="center_text header_block">
+                    <span class="heading">Главная </span>
+                </div>
+                <button class="search">Поиск</button>
+            </nav>
+        </header>
+        <!-- Подзаголовок -->
     </header>
-    <main class="main">
-        <div class="flag-row">
-            <a href="Nations/USA_Researched.html" class="nation_flag usa">
-                <img class="flag_img" src="img/flag/flagUSA.png" alt="Флаг США">
-                <p>США</p>
-            </a>
-            <a href="Nations/USSR_Researched.html" class="nation_flag ussr">
-                <img class="flag_img" src="img/flag/flagUSSR.png" alt="Флаг СССР">
-                <p>СССР</p>
-            </a>
-            <a href="Nations/Germany_Researched.html" class="nation_flag germany">
-                <img class="flag_img" src="img/flag/flagGermany.png" alt="Флаг Германии">
-                <p>Германия</p>
-            </a>
+    <main class="main" style="height: calc(100vh - 100px); width: 90%;">
+        <div class="bron_idea">
+            <div class="tank_image"></div>
+            <div class="flags">
+                <a href="Nations/USA_Researched.html" class="nation_flag usa">
+                    <img class="flag_img" src="img/flag/flagUSA.png" alt="Флаг США">
+                    <p>США</p>
+                </a>
+                <a href="Nations/USSR_Researched.html" class="nation_flag ussr">
+                    <img class="flag_img" src="img/flag/flagUSSR.png" alt="Флаг СССР">
+                    <p>СССР</p>
+                </a>
+                <a href="Nations/Germany_Researched.html" class="nation_flag germany">
+                    <img class="flag_img" src="img/flag/flagGermany.png" alt="Флаг Германии">
+                    <p>Германия</p>
+                </a>
+                    <a href="tank.html" class="nation_flag sweden">
+                        <img class="flag_img" src="img/flag/flagSweden.png" alt="Флаг Швеции">
+                        <p>Швеция</p>
+                </a>
+                <a href="Nations/France_Researched.html" class="nation_flag france">
+                    <img class="flag_img" src="img/flag/flagFranec.png" alt="Флаг Франции">
+                    <p>Франция</p>  
+                </a>
+                <a href="Nations/Italy_Researched.html" class="nation_flag italy">
+                    <img class="flag_img" src="img/flag/flagItalia.png" alt="Флаг Италии">
+                    <p>Италия</p>
+                </a>
+                <a href="Nations/Britain_Researched.html" class="nation_flag uk">
+                    <img class="flag_img" src="img/flag/flagUK.png" alt="Флаг Великобритании">
+                    <p>Великобритания</p>
+                </a>
+                <a href="Nations/China_Researched.html" class="nation_flag china">
+                    <img class="flag_img" src="img/flag/flagChina.png" alt="Флаг Китая">
+                    <p>Китай</p>
+                </a>
+                <a href="Nations/Israel_Researched.html" class="nation_flag israel">
+                    <img class="flag_img" src="img/flag/flagIsrael.png" alt="Флаг Израиля">
+                    <p>Израиль</p>
+                </a>
+                <a href="Nations/Japan_Researched.html" class="nation_flag japan">
+                    <img class="flag_img" src="img/flag/flagJapan.png" alt="Флаг Японии">
+                    <p>Япония</p>
+                </a>
+            </div>
         </div>
-        <div class="flag-row">
-            <a href="Nations/Sweden_Researched.html" class="nation_flag sweden">
-                <img class="flag_img" src="img/flag/flagSweden.png" alt="Флаг Швеции">
-                <p>Швеция</p>
-            </a>
-            <a href="Nations/France_Researched.html" class="nation_flag france">
-                <img class="flag_img" src="img/flag/flagFranec.png" alt="Флаг Франции">
-                <p>Франция</p>  
-            </a>
-            <a href="Nations/Italy_Researched.html" class="nation_flag italy">
-                <img class="flag_img" src="img/flag/flagItalia.png" alt="Флаг Италии">
-                <p>Италия</p>
-            </a>
-            <a href="Nations/Britain_Researched.html" class="nation_flag uk">
-                <img class="flag_img" src="img/flag/flagUK.png" alt="Флаг Великобритании">
-                <p>Великобритания</p>
-            </a>
-        </div>
-        <div class="flag-row">
-            <a href="Nations/China_Researched.html" class="nation_flag china">
-                <img src="img/flag/flagChina.png" alt="Флаг Китая">
-                <p>Китай</p>
-            </a>
-            <a href="Nations/Israel_Researched.html" class="nation_flag israel">
-                <img src="img/flag/flagIsrael.png" alt="Флаг Израиля">
-                <p>Израиль</p>
-            </a>
-            <a href="Nations/Japan_Researched.html" class="nation_flag japan">
-                <img src="img/flag/flagJapan.png" alt="Флаг Японии">
-                <p>Япония</p>
-            </a>
-        </div>
+    </div> 
     </main>
     <footer class="footer"></footer>
 </body>
