@@ -1,16 +1,3 @@
-/* ============================================
-   usa_researched_optimized.css
-   Только классы, реально используемые в USA_Researched.html
-   Без изменений, только оптимизировано (удалены неиспользуемые классы)
-   ============================================ */
-
-/**
- * Файл объединяет стили из:
- * - fonts.css (шрифты и адаптивные размеры)
- * - style.css (основная структура страницы)
- * - tank_styles.css (стили для шапки и меню)
- * - nations_styles.css (сетка техники и карточки)
- */
 
 /* ============================================
    БЛОК 1: СТИЛИ ИЗ FONTS.CSS
@@ -97,7 +84,7 @@ body {
     padding: 0;
     margin: 0;
     background-color: black;
-    height: 100%;
+    height: 150px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -240,6 +227,8 @@ a {
         width: 85%;
     }
 
+    .technic_grid {}
+
     .menu {
         height: 80px;
     }
@@ -300,6 +289,15 @@ a {
     border-bottom: white solid 1px;
 }
 
+/* -------------- Изображения техники ------------- */
+.technic_image{
+    z-index: 1000;
+    position: relative;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+}
+
 /* ---------- Карточки обычной техники (синие) ---------- */
 .technic {
     background-color: rgba(0, 64, 96, 1);
@@ -307,8 +305,8 @@ a {
     display: inline-block;
     position: relative;
     width: 100%;
-    padding-top: 50%;
-    height: 0;
+    height: 100%;
+    z-index: 10000;
 }
 
 /* Пустая ячейка сетки (без техники) */
