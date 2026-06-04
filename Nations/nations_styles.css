@@ -227,8 +227,6 @@ a {
         width: 85%;
     }
 
-    .technic_grid {}
-
     .menu {
         height: 80px;
     }
@@ -316,8 +314,8 @@ a {
     display: inline-block;
     position: relative;
     width: 100%;
-    padding-top: 50%;
-    height: 0;
+    height: 100%;
+    z-index: 10000;
 }
 
 /* ---------- Карточки техники за внутриигровую валюту (серые) ---------- */
@@ -327,8 +325,8 @@ a {
     display: inline-block;
     position: relative;
     width: 100%;
-    padding-top: 50%;
-    height: 0;
+    height: 100%;
+    z-index: 10000;
 }
 
 /* ---------- Карточки премиум техники (золотые) ---------- */
@@ -338,8 +336,8 @@ a {
     display: inline-block;
     position: relative;
     width: 100%;
-    padding-top: 50%;
-    height: 0;
+    height: 100%;
+    z-index: 10000;
 }
 
 /* Основной контент страницы исследования */
