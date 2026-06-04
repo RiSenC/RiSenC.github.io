@@ -12,7 +12,9 @@
     background-color: #161616;
 }
 
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /* Шапка */
+
 .header {
     align-self: center;
     position: fixed;
@@ -24,7 +26,8 @@
 .menu {
     display: grid;
     grid-template-columns: 0.9fr 1.2fr 0.9fr;
-    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px);
     width: unset;
     align-items: center;
     justify-items: center;
@@ -41,7 +44,9 @@
     width: calc(100px + 33%);
 }
 
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /* Основной контент */
+
 .main {
     margin: 0 auto;
     margin-top: 100px;
@@ -172,7 +177,9 @@
     margin-bottom: 10px;
 }
 
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /* Контент с танком */
+
 .tank_content {
     display: grid;
     grid-template-columns: 50% 50%;
@@ -297,6 +304,8 @@
 }
 
 /* Секция статов */
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
 .stats {
     display: flex;
     flex-wrap: wrap;
@@ -481,6 +490,7 @@
 }
 
 /* Карточка с описанием снаряда */
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 .shell_window {
     display: none;
@@ -602,9 +612,11 @@
 }
 
 /* Конец карточки */
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* Пулемёт */
 
 .korobka_ammo-machine_gun {
-    border-radius: 15px;
+    border-radius: 17.5px;
     border: 1px solid #fff;
     justify-content: space-around;
     background-color: rgba(0, 0, 0, 0.25);
@@ -653,3 +665,78 @@
     display: flex;
     align-items: center;
 }
+
+/* Конец пулемёта */
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* Модификации */
+
+.modifications_grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    border: 2px #fff solid;
+    border-radius: 10px;
+    padding: 10px 0;
+}
+
+.mods {
+    display: grid;
+    gap: 5px;
+    padding: 0 10px;
+    grid-template-rows: 1fr 4fr 4fr 4fr 4fr;
+    border-left: 1px solid rgba(255,255,255,0.5);
+}
+
+.mods:first-child {
+    border: none;
+}
+
+.mod {
+    border: 1px #fff solid;
+    border-radius: 10px;
+}
+
+.mods_heading { grid-area: heading; }
+.mobility.mods {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "heading heading"
+    "tracks ."
+    "suspension breaks"
+    "filters ."
+    "transmission engine";
+}
+.mod.tracks { grid-area: tracks; }
+.mod.suspension { grid-area: suspension; }
+.mod.breaks { grid-area: breaks; }
+.mod.filters { grid-area: filters; }
+.mod.transmission { grid-area: transmission; }
+.mod.engine { grid-area: engine; }
+
+.protection.mods {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "heading"
+    "parts"
+    "ffe"
+    "crew"
+    ".";
+}
+.mod.parts { grid-area: parts; }
+.mod.ffe { grid-area: ffe; }
+.mod.crew { grid-area: crew; }
+
+.firepower.mods {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "heading heading"
+    "horizontal ."
+    "calibration M61"
+    "vertical T45"
+    "M89 .";
+}
+.mod.horizontal { grid-area: horizontal; }
+.mod.calibration { grid-area: calibration; }
+.mod.M61 { grid-area: M61; }
+.mod.vertical { grid-area: vertical; }
+.mod.T45 { grid-area: T45; }
+.mod.M89 { grid-area: M89; }
