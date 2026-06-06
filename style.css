@@ -1,71 +1,119 @@
+* {
+    box-sizing: border-box;
+    transition: 0.33s;
+    overflow: hidden;
+}
+
 h1, h2, h3, h4, h5, h6, p, span {
     color: #fff;
     font-family: 'Roboto', sans-serif;
 }
+
+html
 
 body {
     padding: 0;
     margin:0;
     background-color: black;
     height: 100%;
+    width: 100%;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
 }
 
+.header {
+    align-self: center;
+    position: fixed;
+    max-width: 1280px;
+    min-width: 540px;
+    z-index: 5;
+    top: 0;
+}
+
 .menu {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 100px;
+    display: grid;
+    grid-template-columns: 0.9fr 1.2fr 0.9fr;
+    background-color: rgba(0, 0, 0, 0.33);
+    backdrop-filter: blur(10px);
     border: #fff solid 1px;
     border-top: 0;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
-    box-sizing: border-box;
-    margin: 0;
-    font-weight: 800;
-    width: 70%;
-    margin: 0 auto;
+    border-radius: 0 0 25px 25px;
+    align-items: center;
+    justify-items: center;
 }
 
 .header_block {
     display: flex;
     flex-direction: column;
-    column-gap: 0;
-    justify-content: center;
+    text-align: center;
 }
 
-.header_text {
-    color: #fff;
-    font-size: 15px;
+.center_text {
+    display: inline;
+    margin: auto 0;
+    justify-self: center;
+}
+
+.search {
+    height: calc(25px + 25%);
+    width: calc(100px + 33%);
+}
+
+@media screen and (width<1024px){
+    .header {
+        width: 95%;
+    }
+
+    .menu {
+        height: 70px;
+    }
+
+    .main {
+        margin-top: 80px;
+    }
+}
+
+@media screen and (1024px <= width < 1400px){
+    .header  {
+        width: 85%;
+    }
+
+    .menu {
+        height: 80px;
+    }
+
+    .main {
+        margin-top: 100px;
+    }
+}
+
+@media screen and (1400px <= width){
+    .header {
+        width: 70%;
+    }
+
+    .menu { 
+        height: 90px;
+    }
+    
+    .main {
+        margin-top: 110px;
+    }
 }
 
 p {
-    display: inline;
     color: #fff;
     margin: 0;
     padding: 0;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.5);
-    width: min-content;
     text-align: center;
-    position: relative;
-    top: -50px;
     font-weight: 500;
-}
-
-.tanks_text {
-    font-size: 24px;
-}
-
-.wiki_text {
-    font-size: 48px;
-}
-
-.header_text {
-    font-size: 48px;
+    margin-block: 0;
+    position: relative;
+    top: -26px;
 }
 
 .main {
@@ -81,36 +129,39 @@ p {
 
 .bron_idea {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly   ;
     height: 100%;
     width: 100%;
+    overflow: visible;
 }
 
 .flags {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(5 1fr);
+    column-gap: 50px;
 }
 
 .tank_image {
-    background-image: url("img/nations/USA/III Rank/M4A3E2.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 50%;
-    height: 40%;
+    width: 1024px;
+}
+
+.div_tank_image {
+    overflow: hidden;
+    display: flex;
+    width: 766px;
+    align-items: center;
+    position: relative;
+
 }
 
 .nation_flag {
-    width: 252px;
-    height: max-content;
-    font-size: 40px;
     padding: 0;
+    margin: 0;
     text-align: center;
 }
 
 .flag_img {
-    width: 210px;
-    height: 100px;
     border: #fff solid 1px;
     border-radius: 10px;
 }
