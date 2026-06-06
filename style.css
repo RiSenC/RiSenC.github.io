@@ -129,7 +129,7 @@ p {
 
 .bron_idea {
     display: flex;
-    justify-content: space-evenly   ;
+    justify-content: space-evenly;
     height: 100%;
     width: 100%;
     overflow: visible;
@@ -143,7 +143,15 @@ p {
 }
 
 .tank_image {
-    width: 1024px;
+    background-image: url("img/nations/USA/III Rank/M4A3E2.png");
+    width: 150%;
+    height: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.flags:has(.usa:hover) .tank_image {
+    background-image: url("img/nations/USA/II Rank/T77E1.png");
 }
 
 .div_tank_image {
