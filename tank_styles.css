@@ -699,7 +699,7 @@ a, p {
     display: grid;
     gap: 5px;
     padding: 0 10px;
-    grid-template-rows: 1fr 4fr 4fr 4fr 4fr;
+    grid-template-rows: 1fr 3.5fr 3.5fr 3.5fr 3.5fr;
     border-left: 1px solid rgba(255,255,255,0.5);
 }
 
@@ -710,6 +710,20 @@ a, p {
 .mod {
     border: 1px #fff solid;
     border-radius: 10px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1.5fr;
+    padding: 5px;
+    gap: 5px;
+    background: none;
+}
+
+.mod:hover {
+    cursor: pointer;
+}
+
+.mod img {
+    width: 100%;
 }
 
 .mods_heading { grid-area: heading; }
