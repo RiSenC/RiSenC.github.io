@@ -708,6 +708,7 @@ a, p {
 }
 
 .mod {
+    position: relative;
     border: 1px #fff solid;
     border-radius: 10px;
     display: grid;
@@ -716,13 +717,14 @@ a, p {
     padding: 5px;
     gap: 5px;
     background: none;
+    text-align: start;
 }
 
 .mod:hover {
     cursor: pointer;
 }
 
-.mod img {
+.mod img, .mod_description img {
     width: 100%;
 }
 
@@ -771,3 +773,52 @@ a, p {
 .mod.vertical { grid-area: vertical; }
 .mod.T45 { grid-area: T45; }
 .mod.M89 { grid-area: M89; }
+
+.mod_description {
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    text-align: left;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    width: 100%;
+    left: -25%;
+    padding: 10px;
+    background-color: #161616;
+    box-shadow: #000 0 0 100px 50px;
+    z-index: 1;
+    overflow: visible;
+}
+
+.mod:focus-within .mod_description {
+    width: 150%;
+    height: 300%;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    user-select: text;
+}
+
+.mod:focus-within .mod_description:hover {
+    cursor: auto;
+}
+
+.mod_header {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+.mod_modifiers {
+    display: flex;
+    flex-direction: column;
+}
+
+.mod_costs {
+    width: 90%;
+    border: #fff 1px solid  ;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.mod_icon {
+    height: 20%;
+}
